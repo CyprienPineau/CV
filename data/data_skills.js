@@ -104,7 +104,7 @@ const DATA_SKILLS = [
             {
                 name:"Président d’association",
                 duration:"1 ans",
-                note:"En 2015, direction d'un club de musique composer de 12 membres du bureau, 70 adhérents"
+                note:"En 2015, direction d'un club de musique composé de 12 membres du bureau, 70 adhérents"
             },
         ],
         juniorList:[]
