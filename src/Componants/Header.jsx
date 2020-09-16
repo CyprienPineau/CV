@@ -68,7 +68,7 @@ class Header extends Component {
             <div className="header-textbox">
                 <h1 className="header-textbox-title">Cyprien PINEAU</h1>
                 {/* <p className="header-introduction" style={{opacity : this.state.opacity}}>Bonjour je suis un jeune ingénieur dynamique !</p> */}
-                <p className="header-textbox-introduction">Bonjour je suis un jeune ingénieur dynamique ! J'aime les chips et le chocolat mais aussi la chantily et aussi encore oui c'est bientot fini Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit blanditiis voluptates error dolorem incidunt nam reiciendis quaerat! Ex, odit quo veniam voluptate tempora ipsum inventore aut ducimus tenetur eius vero.</p>
+                <p className="header-textbox-introduction">Bonjour je suis un jeune ingénieur dynamique ! J'aime les chips et le chocolat mais aussi la chantily et aussi encore oui c'est bientot fini Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
             </div>
             <img src={imageCyprienP} alt="Photo de Cyprien"/>
