@@ -1,0 +1,133 @@
+@import './../TemplateStyleSeting.css';
+
+.header{
+    padding: 80px 80px 0px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+img {
+    height: 300px;
+    border: 3px solid var(--BrightSecondary);
+    border-radius: 9999px;
+    box-shadow: var(--StandardShadow);
+    /* box-shadow: inset var(--StandardShadow); */
+}
+.header-textbox {
+    flex:1;
+    margin-right: 80px;
+    max-width: 600px;
+}
+.header-textbox-title {
+    color: var(--BrightPrimary);
+    font-weight: 200;
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-shadow: var(--StandardShadowText);
+}
+.header-textbox-introduction{
+    color: var(--BrightSecondary);
+    text-align: justify;
+    text-shadow: var(--StandardShadowText);
+    font-size: 18px;
+}
+.header-navbar{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 10px;
+    list-style: none;
+}
+.header-navbar-button{
+    width: 140px;
+    height: 40px;
+    display: table; 
+
+}
+.header-navbar-button-text{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    flex: 1;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 18px;
+    color: var(--BrightSecondary);
+    text-shadow: var(--StandardShadowText);
+}
+.header-navbar-button:hover{
+    border-bottom: solid 3px var(--BrightPrimary);
+    font-weight: normal;
+}
+.header-navbar-button-text:hover{
+    color: var(--BrightPrimary);
+}
+
+/* RESPONSIVE PARAMETER */
+
+@media (max-width: 960px) {
+    .header{
+        padding: 80px 60px 30px 60px;
+    }
+    .header-textbox {
+        margin-right: 60px;
+    }
+    img{
+        height: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header{
+        flex-direction: column-reverse;
+        padding: 10px 20px 10px 20px;
+    }
+    .header-navbar{
+        display: none;
+    }
+    .header-textbox {
+        margin-right: 0px;
+    }
+    .header-textbox-title {
+        text-align: center;
+    }
+    img{
+        margin: 30px;
+    }
+}
+
+/* SideMenu ouvert */
+
+@media (max-width: (960px + var(--SideMenuSize))) {
+    .header{
+        padding: 80px 60px 30px 60px;
+    }
+    .header-textbox {
+        margin-right: 60px;
+    }
+    img{
+        height: 250px;
+    }
+}
+
+@media (max-width: (700px + var(--SideMenuSize))) {
+    .header{
+        flex-direction: column-reverse;
+        padding: 10px 20px 10px 20px;
+    }
+    .header-navbar{
+        display: none;
+    }
+    .header-textbox {
+        margin-right: 0px;
+    }
+    .header-textbox-title {
+        text-align: center;
+    }
+    img{
+        margin: 30px;
+    }
+}

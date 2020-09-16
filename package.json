@@ -1,0 +1,15 @@
+{
+  "name": "parcelcv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scrollbars-custom": "^4.0.25",
+    "react-spring": "^8.0.27"
+  },
+  "scripts": {
+    "start": "npx parcel index.html"
+  }
+}

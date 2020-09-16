@@ -1,0 +1,39 @@
+/* skillslist */
+.skillslist {
+    background-color: var(--DarkSecondary);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillslist-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skillslist-title {
+    font-size: 30px;
+    color: var(--MiddlePrimary);
+    margin-bottom: 30px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+
+.skillslist-skilltype {
+    background-color: var(--DarkPrimary);
+    padding: 30px;
+    margin: 0px 15px 30px 15px;
+    min-width: 300px;
+    box-shadow: inset var(--StandardShadow);
+    border-radius: 5px;
+}
+
+.skillslist-skilltype-title {
+    color: var(--BrightPrimary);
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
