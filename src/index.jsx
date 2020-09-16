@@ -31,10 +31,13 @@ class Home extends Component {
     }
 
     render() { 
+
         return <div className="home">
             <div className="home-maincontent">
                 <RSC className="home-maincontent-scrollbox">
-                    <Header/>
+                    <Header
+                        isSideMenuShown = {this.state.isSideMenuShown}
+                    />
                     <Content
                         showSideMenu={this.handleShowSideMenu}
                     />

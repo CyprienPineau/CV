@@ -48,9 +48,9 @@ class Header extends Component {
     }
 
     render() { 
-        return <div className="header" >
-            <nav className="header-navbar">
-                <ul className="header-navbar">
+        return <div className={this.props.isSideMenuShown ? "header sidemenuopen" : "header"}>
+            <nav>
+                <ul className={this.props.isSideMenuShown ? "header-navbar sidemenuopen" : "header-navbar"}>
                     <li className="header-navbar-button">
                         <a href="#experiences" className="header-navbar-button-text">Expériences</a>
                     </li>
@@ -65,14 +65,15 @@ class Header extends Component {
                     </li>
                 </ul>
             </nav>
-            <div className="header-textbox">
-                <h1 className="header-textbox-title">Cyprien PINEAU</h1>
-                {/* <p className="header-introduction" style={{opacity : this.state.opacity}}>Bonjour je suis un jeune ingénieur dynamique !</p> */}
+            <div className={this.props.isSideMenuShown ? "header-textbox sidemenuopen" : "header-textbox"}>
+                <h1 className={this.props.isSideMenuShown ? "header-textbox-title sidemenuopen" : "header-textbox-title"}>Cyprien PINEAU</h1>
                 <p className="header-textbox-introduction">Bonjour je suis un jeune ingénieur dynamique, je viens de finir de mettre en ligne mon site internet !</p>
-
             </div>
-            <img src={imageCyprienP} alt="Photo de Cyprien"/>
-            {/* <img src={require("./../Ressources/Cyprien.png")} alt="Photo de Cyprien"/> */}
+            <img 
+                className={this.props.isSideMenuShown ? "header-pofileimg sidemenuopen" : "header-pofileimg"}
+                src={imageCyprienP} 
+                alt="Photo de Cyprien"
+            />
         </div>
     }
 }
