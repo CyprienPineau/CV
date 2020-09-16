@@ -28362,12 +28362,79 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./Ressources\\background-1487545_1920.jpg":[["background-1487545_1920.4093de3f.jpg","src/Ressources/background-1487545_1920.jpg"],"src/Ressources/background-1487545_1920.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/Header.css":[function(require,module,exports) {
+},{"./TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./Ressources\\background-1487545_1920.jpg":[["background-1487545_1920.4093de3f.jpg","src/Ressources/background-1487545_1920.jpg"],"src/Ressources/background-1487545_1920.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm-cache/_npx/10568/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Roaming/npm-cache/_npx/10568/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/10568/node_modules/parcel/src/builtins/bundle-url.js"}],"src/Componants/Header.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/css-loader.js"}],"src/Ressources/CyprienP.jpg":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/10568/node_modules/parcel/src/builtins/css-loader.js"}],"src/Ressources/CyprienP.jpg":[function(require,module,exports) {
 module.exports = "/CyprienP.50b412dc.jpg";
 },{}],"src/Componants/Header.jsx":[function(require,module,exports) {
 "use strict";
@@ -28471,11 +28538,9 @@ var Header = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
-        className: "header"
-      }, /*#__PURE__*/_react.default.createElement("nav", {
-        className: "header-navbar"
-      }, /*#__PURE__*/_react.default.createElement("ul", {
-        className: "header-navbar"
+        className: this.props.isSideMenuShown ? "header sidemenuopen" : "header"
+      }, /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
+        className: this.props.isSideMenuShown ? "header-navbar sidemenuopen" : "header-navbar"
       }, /*#__PURE__*/_react.default.createElement("li", {
         className: "header-navbar-button"
       }, /*#__PURE__*/_react.default.createElement("a", {
@@ -28497,12 +28562,13 @@ var Header = /*#__PURE__*/function (_Component) {
         href: "#projects",
         className: "header-navbar-button-text"
       }, "Projets")))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "header-textbox"
+        className: this.props.isSideMenuShown ? "header-textbox sidemenuopen" : "header-textbox"
       }, /*#__PURE__*/_react.default.createElement("h1", {
-        className: "header-textbox-title"
+        className: this.props.isSideMenuShown ? "header-textbox-title sidemenuopen" : "header-textbox-title"
       }, "Cyprien PINEAU"), /*#__PURE__*/_react.default.createElement("p", {
         className: "header-textbox-introduction"
-      }, "Bonjour je suis un jeune ing\xE9nieur dynamique ! J'aime les chips et le chocolat mais aussi la chantily et aussi encore oui c'est bientot fini Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit blanditiis voluptates error dolorem incidunt nam reiciendis quaerat! Ex, odit quo veniam voluptate tempora ipsum inventore aut ducimus tenetur eius vero.")), /*#__PURE__*/_react.default.createElement("img", {
+      }, "Bonjour je suis un jeune ing\xE9nieur dynamique, je viens de finir de mettre en ligne mon site internet !")), /*#__PURE__*/_react.default.createElement("img", {
+        className: this.props.isSideMenuShown ? "header-pofileimg sidemenuopen" : "header-pofileimg",
         src: _CyprienP.default,
         alt: "Photo de Cyprien"
       }));
@@ -28513,6 +28579,7 @@ var Header = /*#__PURE__*/function (_Component) {
 }(_react.Component);
 
 var _default = Header; // Image par <a href="https://pixabay.com/fr/users/Yuri_B-2216431/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Yuri_B</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Pixabay</a>
+// pointe sur ovh 213.186.33.5
 
 exports.default = _default;
 },{"react":"node_modules/react/index.js","./Header.css":"src/Componants/Header.css","./../Ressources/CyprienP.jpg":"src/Ressources/CyprienP.jpg"}],"src/Componants/Content.css":[function(require,module,exports) {
@@ -28520,12 +28587,79 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/ExperienceList.css":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm-cache/_npx/9560/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Roaming/npm-cache/_npx/9560/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/9560/node_modules/parcel/src/builtins/bundle-url.js"}],"src/Componants/ExperienceList.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/css-loader.js"}],"data/data_experiences.js":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/9560/node_modules/parcel/src/builtins/css-loader.js"}],"data/data_experiences.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28554,7 +28688,7 @@ var DATA_EXPERIENCES = [{
   date: "Septembre à Novembre 2018",
   duration: "3mois",
   title: "Outil de réunion en réalité augmentée",
-  description: "Responsabilité du développement du projet.\nOrchestration des activités des deux autres développeurs.\nUtilisation de la technologie Hololens couplée avec Unity/C#. Réflexion de développement UX",
+  description: "Responsabilité du développement du projet.\nOrchestration des activités des deux autres développeurs.\nUtilisation de la technologie Hololens couplée avec Unity/C#.\nRéflexion de développement UX",
   skills: ["Unity/C#", "Equipe de 2 ingénieurs", "Agile"]
 }, {
   id: '3',
@@ -34149,7 +34283,9 @@ var Home = /*#__PURE__*/function (_Component) {
         className: "home-maincontent"
       }, /*#__PURE__*/_react.default.createElement(_reactScrollbarsCustom.default, {
         className: "home-maincontent-scrollbox"
-      }, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_Content.default, {
+      }, /*#__PURE__*/_react.default.createElement(_Header.default, {
+        isSideMenuShown: this.state.isSideMenuShown
+      }), /*#__PURE__*/_react.default.createElement(_Content.default, {
         showSideMenu: this.handleShowSideMenu
       }))), /*#__PURE__*/_react.default.createElement(_SideMenu.default, {
         isShawn: this.state.isSideMenuShown,
@@ -34170,7 +34306,7 @@ var Home = /*#__PURE__*/function (_Component) {
 //https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 // Hide Scrollbards
 // https://www.geeksforgeeks.org/hide-scroll-bar-but-while-still-being-able-to-scroll-using-css/
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./index.css":"src/index.css","./Componants/Header.jsx":"src/Componants/Header.jsx","./Componants/Content.jsx":"src/Componants/Content.jsx","./Componants/SideMenu":"src/Componants/SideMenu.jsx","react-scrollbars-custom":"node_modules/react-scrollbars-custom/dist/rsc.esm.js"}],"../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./index.css":"src/index.css","./Componants/Header.jsx":"src/Componants/Header.jsx","./Componants/Content.jsx":"src/Componants/Content.jsx","./Componants/SideMenu":"src/Componants/SideMenu.jsx","react-scrollbars-custom":"node_modules/react-scrollbars-custom/dist/rsc.esm.js"}],"../../../AppData/Roaming/npm-cache/_npx/10568/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34198,7 +34334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52857" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58549" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34374,5 +34510,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/17152/node_modules/parcel/src/builtins/hmr-runtime.js","src/index.jsx"], null)
+},{}]},{},["../../../AppData/Roaming/npm-cache/_npx/10568/node_modules/parcel/src/builtins/hmr-runtime.js","src/index.jsx"], null)
 //# sourceMappingURL=/src.6ebfba02.js.map

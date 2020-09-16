@@ -22,7 +22,7 @@ const DATA_EXPERIENCES = [
     date : "Septembre à Novembre 2018",
     duration : "3mois",
     title : "Outil de réunion en réalité augmentée",
-    description: "Responsabilité du développement du projet.\nOrchestration des activités des deux autres développeurs.\nUtilisation de la technologie Hololens couplée avec Unity/C#. Réflexion de développement UX",
+    description: "Responsabilité du développement du projet.\nOrchestration des activités des deux autres développeurs.\nUtilisation de la technologie Hololens couplée avec Unity/C#.\nRéflexion de développement UX",
     skills : ["Unity/C#","Equipe de 2 ingénieurs","Agile"]
 },
 {
