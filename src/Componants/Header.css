@@ -108,8 +108,8 @@
 
 /* SideMenu ouvert */
 
-/* 960px + size menu */
-@media (max-width: 1260px) {
+/* 960px + size menu(350)  */
+@media (max-width: 1310px) {
     .header.sidemenuopen{
         padding: 80px 60px 30px 60px;
     }
@@ -123,8 +123,8 @@
         font-size: 50px;
     }
 }
-/* 700px + size menu */
-@media (max-width: 1000px) {
+/* 700px + size menu(350) */
+@media (max-width: 1050px) {
     .header.sidemenuopen{
         flex-direction: column-reverse;
         padding: 10px 20px 10px 20px;

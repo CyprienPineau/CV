@@ -11,6 +11,7 @@ class Content extends Component {
         return <div className="content">
             <ExperienceList 
                 showSideMenu={this.props.showSideMenu}
+                isSideMenuShown = {this.props.isSideMenuShown}
             />
             <SkillsList
                 showSideMenu={this.props.showSideMenu}

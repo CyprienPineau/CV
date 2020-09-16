@@ -62,7 +62,10 @@ class ExperienceList extends Component {
                 showSideMenu={this.props.showSideMenu}
             />
         )
-        return <div id="experiences" className="experienceList">
+        return <div 
+            id="experiences" 
+            className={this.props.isSideMenuShown ? "experienceList sidemenuopen" : "experienceList"}
+        >
             <h2 className="experienceList-title" >Expériences</h2>
             {ExperienceList}
         </div>

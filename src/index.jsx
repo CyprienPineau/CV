@@ -40,6 +40,7 @@ class Home extends Component {
                     />
                     <Content
                         showSideMenu={this.handleShowSideMenu}
+                        isSideMenuShown = {this.state.isSideMenuShown}
                     />
                 </RSC>
                 {/* <a href="" className="home-maincontent-returnTop">
