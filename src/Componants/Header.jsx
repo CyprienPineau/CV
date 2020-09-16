@@ -68,7 +68,7 @@ class Header extends Component {
             <div className="header-textbox">
                 <h1 className="header-textbox-title">Cyprien PINEAU</h1>
                 {/* <p className="header-introduction" style={{opacity : this.state.opacity}}>Bonjour je suis un jeune ingénieur dynamique !</p> */}
-                <p className="header-textbox-introduction">Bonjour je suis un jeune ingénieur dynamique ! J'aime les chips et le chocolat mais aussi la chantily et aussi encore oui c'est bientot fini Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p className="header-textbox-introduction">Bonjour je suis un jeune ingénieur dynamique, je viens de finir de mettre en ligne mon site internet !</p>
 
             </div>
             <img src={imageCyprienP} alt="Photo de Cyprien"/>
@@ -80,3 +80,5 @@ class Header extends Component {
 export default Header;
 
 // Image par <a href="https://pixabay.com/fr/users/Yuri_B-2216431/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Yuri_B</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Pixabay</a>
+
+// pointe sur ovh 213.186.33.5
