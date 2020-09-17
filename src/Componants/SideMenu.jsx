@@ -5,31 +5,59 @@ import './SideMenu.css'
 import DATA_EXPERIENCES from './../../data/data_experiences'
 import DATA_SKILLS from './../../data/data_skills'
 
-function SkillExperience (data_experience) {
-    return <a href={"#exp"+data_experience.experience.id} className="skillexperience">
-        <h3 className="skillexperience-duration">{data_experience.experience.duration}</h3>
-        <h4 className="skillexperience-work">{data_experience.experience.work}</h4>
-        <h5 className="skillexperience-title">{data_experience.experience.title}</h5>
-        {/* <p className="skillexperience-description">{data_experience.experience.description}</p> */}
-    </a>
+class SkillExperience extends Component {
+    
+    render() { 
+        return <a 
+            href={"#exp"+this.props.experience.id} 
+            className="skillexperience"
+            onClick={this.props.innerWidth < 700 ? this.props.show : null} 
+        >
+            <h3 className="skillexperience-duration">{this.props.experience.duration}</h3>
+            <h4 className="skillexperience-work">{this.props.experience.work}</h4>
+            <h5 className="skillexperience-title">{this.props.experience.title}</h5>
+            {/* <p className="skillexperience-description">{experience.description}</p> */}
+        </a>
+    }
 }
 
 class SideMenu extends Component {
     
     constructor(props){
         super(props)
+        this.state = {
+            
+            windowInnerWidth : window.innerWidth
+        }
+        
+        //surveillance du resize fenètre pour la mise à jour du comportement de SkillExperience
+        this.UpdateWindowInnerWidth = this.UpdateWindowInnerWidth.bind(this);
+    }
+
+    componentDidMount() {
+        window.addEventListener("resize", this.UpdateWindowInnerWidth);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.UpdateWindowInnerWidth);
+    }
+
+    UpdateWindowInnerWidth(){
+        this.setState({windowInnerWidth : window.innerWidth})
     }
 
     render() { 
         const subject = this.props.subject
+        const show = this.props.show
+        const windowInnerWidth = this.state.windowInnerWidth
 
         // selection les experiences correspondant au sujet du volet
-        const list = DATA_EXPERIENCES.map(function(experience,key){
+        const experienceList = DATA_EXPERIENCES.map(function(experience,key){
             let isIntheSubject = false;
             
             experience.skills.map(function(skill,key){
                 if(skill == subject){
-                    isIntheSubject = true; // a optimiser
+                    isIntheSubject = true; // TODO a optimiser
                 }
             })
 
@@ -37,21 +65,23 @@ class SideMenu extends Component {
                 return <SkillExperience
                         key = {key}
                         experience = {experience}
+                        show = {show}
+                        innerWidth = {windowInnerWidth}
                     />
             }
         })
 
         // selection de la note correspondant au sujet
-        const note = DATA_SKILLS.map(function(typeskills,key){
-            let skillNote = ''
+        const skillNote = DATA_SKILLS.map(function(typeskills,key){
+            let skillNoteToReturn = ''
 
             typeskills.masterList.map(function(skill,key){
                 if (skill.name == subject) {
-                    skillNote = skill.note
+                    skillNoteToReturn = skill.note // TODO a optimiser
                 }
             })
 
-            return <p key={key} className="sidemenu-infosupp">{skillNote}</p>
+            return <p key={key} className="sidemenu-infosupp">{skillNoteToReturn}</p>
         })     
 
         return <div className={this.props.isShawn ? "sidemenu shown" : "sidemenu" }>
@@ -66,10 +96,11 @@ class SideMenu extends Component {
                     <h2 className="sidemenu-title">
                         {this.props.subject}
                     </h2>
-                    {list}
-                    {/* <p className="sidemenu-infosupp"> */}
-                        {note}
-                    {/* </p> */}
+
+                    {experienceList}
+
+                    {skillNote}
+
                 </div>
             </RSC>
         </div>     
