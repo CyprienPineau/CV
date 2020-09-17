@@ -54,7 +54,7 @@ class formationList extends Component {
 
     render() { 
         return <div 
-            id="formation" 
+            id="formations" 
             className={this.props.isSideMenuShown ? "formationList sidemenuopen" : "formationList"}
         >
             <h2 className="formationList-title">Formation</h2>
