@@ -3,6 +3,7 @@ import './Content.css'
 
 import ExperienceList from './ExperienceList'
 import SkillsList from './SkillsList'
+import FormationList from './FormationList'
 
 
 class Content extends Component {
@@ -16,6 +17,11 @@ class Content extends Component {
             <SkillsList
                 showSideMenu={this.props.showSideMenu}
             />
+
+            <FormationList
+                isSideMenuShown = {this.props.isSideMenuShown}
+            />
+
             <div>
                 liens externe
             </div>

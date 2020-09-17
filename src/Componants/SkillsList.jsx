@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import DATA_SKILLS from './../../data/data_skills';
 import './SkillsList.css'
 import ButtonSkills from './ButtonSkills'

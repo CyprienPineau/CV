@@ -9,42 +9,6 @@ class Header extends Component {
             y:0,
             opacity:1,
         }
-        this.handleScroll = this.handleScroll.bind(this)
-    }
-
-    componentDidMount(){
-        window.addEventListener('scroll', this.handleScroll);
-    }
-    
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
-    
-    handleScroll(e) {
-        // e.preventDefault()
-        // console.log('ici cest y : '+ this.state.y + ' op :' + this.state.opacity)
-        // this.setState(function(state,props) {
-        //     return {
-        //         y : window.scrollY,
-        //         opacity : this.getRelativeOpacity((window.innerHeight-state.y),300,500)
-        //     }
-        // })
-        // console.log('puis cest y : '+ this.state.y + ' op :' + this.state.opacity)
-    }
-
-    getRelativeOpacity(value, minValueOpacity, maxValueOpacity){
-        let maxDiff = maxValueOpacity-minValueOpacity;
-        let actualDiff = value-minValueOpacity;
-
-        if (actualDiff<=0){
-            return 0;
-        } else if ( actualDiff > maxDiff) {
-            return 1;
-        }
-        else{
-            console.log(actualDiff/maxDiff)
-            return actualDiff/maxDiff
-        }
     }
 
     render() { 
@@ -55,14 +19,15 @@ class Header extends Component {
                         <a href="#experiences" className="header-navbar-button-text">Expériences</a>
                     </li>
                     <li className="header-navbar-button">
-                        <a href="#formations" className="header-navbar-button-text">Formation</a>
-                    </li>
-                    <li className="header-navbar-button">
                         <a href="#skills" className="header-navbar-button-text">Compétences</a>
                     </li>
                     <li className="header-navbar-button">
-                        <a href="#projects" className="header-navbar-button-text">Projets</a>
+                        <a href="#formations" className="header-navbar-button-text">Formation</a>
                     </li>
+                    {/* TODO futur dévellopement
+                    <li className="header-navbar-button">
+                        <a href="#projects" className="header-navbar-button-text">Projets</a>
+                    </li> */}
                 </ul>
             </nav>
             <div className={this.props.isSideMenuShown ? "header-textbox sidemenuopen" : "header-textbox"}>
@@ -81,5 +46,3 @@ class Header extends Component {
 export default Header;
 
 // Image par <a href="https://pixabay.com/fr/users/Yuri_B-2216431/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Yuri_B</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Pixabay</a>
-
-// pointe sur ovh 213.186.33.5
