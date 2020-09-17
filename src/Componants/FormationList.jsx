@@ -15,6 +15,7 @@ class Formation extends Component {
                 <p className="formation-date">2016</p>
             </div>
             <div className={this.props.isSideMenuShown ? "formation-corps-img sidemenuopen" : "formation-corps-img"}>
+                {/* ajout d'une div pour gérer la transparence */}
                 <div className="formation-corps-img-transparency">
                     <img 
                         className="formation-corps-img-logo"

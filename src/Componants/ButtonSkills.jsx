@@ -15,10 +15,11 @@ class ButtonSkills extends Component {
                         onClick={this.props.showSideMenu}
                         className="skill-button"
                     >
-                        {this.props.skill}                    
+                        {this.props.skill}
                     </a>
                 }
-                {(this.props.duration!=undefined)
+                {(this.props.duration!=undefined 
+                    && this.props.duration!="")
                     &&<p className="skill-duration">{this.props.duration}</p>
                 }
             </div>

@@ -3,8 +3,13 @@ const DATA_SKILLS = [
         catégorie:"Langues",
         masterList:[
             {
+                name:"Français",
+                duration:"",
+                note:"Langue maternelle"
+            },
+            {
                 name:"Anglais",
-                duration:"7 mois",
+                duration:"",
                 note:"Courant"
             },
         ],
