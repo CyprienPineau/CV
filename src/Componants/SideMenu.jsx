@@ -80,6 +80,11 @@ class SideMenu extends Component {
                     skillNoteToReturn = skill.note // TODO a optimiser
                 }
             })
+            typeskills.juniorList.map(function(skill,key){
+                if (skill.name == subject) {
+                    skillNoteToReturn = skill.note // TODO a optimiser
+                }
+            })
 
             return <p key={key} className="sidemenu-infosupp">{skillNoteToReturn}</p>
         })     

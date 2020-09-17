@@ -9,7 +9,7 @@ const DATA_EXPERIENCES = [
     date : "Decembre 2018 à Août 2020",
     duration : "2 ans",
     title : "Création d’une Start-Up d'applications numériques",
-    description: "En équipe avec 3 autres associés ingénieurs\nÉtude de l’utilisateur type et des solutions actuelles du marché.\nDéfinition du parcours utilisateur avec prise en compte du game-design.\nRéalisation de Wireframes, et prototype cliquable avec Adobe XD en accord avec les contraintes techniques.\nDéveloppement d’un démonstrateur de l’application, réalisation de la partie Front-End en React Native.\nCréation d’assets graphiques avec Illustrator, et Photoshop.\nConception d’une licence de démonstration de jeu de rôle pour les tests utilisateurs du démonstrateur.\nOrganisation de tests utilisateurs, résolution des problématiques d’interfaces.\nRédaction d’un business plan, écriture de spécifications logiciel, organisation en jalons et chiffrage des activités.",
+    description: "En équipe avec 3 autres associés ingénieurs\nÉtude de l’utilisateur type et des solutions actuelles du marché.\nDéfinition du parcours utilisateur avec prise en compte du game-design.\nRéalisation de Wireframes, et prototype cliquable avec Adobe XD en accord avec les contraintes techniques.\nDéveloppement d’un démonstrateur de l’application, réalisation de la partie Front-End en React Native.\nCréation d’assets graphiques avec Illustrator, et Photoshop.\nConception d’une licence de démonstration de jeu de rôle pour les tests utilisateurs du démonstrateur.\nOrganisation de tests utilisateurs, résolution des problématiques d’interfaces.\nRédaction d’un business plan, écriture de spécifications fonctionnelles, organisation en jalons et chiffrage des activités.",
     skills : ["ReactNative","Adobe XD","Illustrator","Photoshop","Agile","Documentation"]
 },  
 {
@@ -22,8 +22,8 @@ const DATA_EXPERIENCES = [
     date : "Septembre à Novembre 2018",
     duration : "3mois",
     title : "Outil de réunion en réalité augmentée",
-    description: "Responsabilité du développement du projet.\nOrchestration des activités des deux autres développeurs.\nUtilisation de la technologie Hololens couplée avec Unity/C#.\nRéflexion de développement UX",
-    skills : ["Unity/C#","Equipe de 2 ingénieurs","Agile"]
+    description: "Initiation de la refonte du projet et création de la nouvelle architecture.\nCoordination de deux jeunes ingénieur.\nUtilisation de la technologie Hololens couplée avec Unity/C#.\nRéflexion de développement UX.",
+    skills : ["Unity/C#","Equipe de 2 ingénieurs"]
 },
 {
     id : '3',
@@ -35,7 +35,7 @@ const DATA_EXPERIENCES = [
     date : "Mars à Août 2018",
     duration : "6 mois",
     title : "Logiciel de suivi de cible",
-    description: "Développement en C/C++.\nRéglage de l’algorithme suite aux tests. \nSensibilisation aux problématiques de traitement d’images.\nTravail en autonomie et tests en condition réelle.",
+    description: "Développement en C/C++ sous linux.\nRéglage de l’algorithme suite aux tests. \nRéponse à des problématiques de traitement d’images.\nTravail en autonomie et tests en condition réelle.",
     skills : ["C/C++","OS Linux","Autonomie"]
 }, 
 {
@@ -48,7 +48,7 @@ const DATA_EXPERIENCES = [
     date : "Mars 2017 à Fevrier 2018",
     duration : "1 ans",
     title : "Logiciel de pilotage d’un module de vision de drone ",
-    description: "En équipe de 14 personnes, développement C/C++, rédaction de cas de test, de procédure de tests, et réalisation des tests,tâches de traçabilité d’exigences.",
+    description: "En équipe de 14 personnes, développement C/C++ sous linux, rédaction et application de cas de test, de procédure de tests.\nTâches de traçabilité d’exigences.",
     skills : ["C/C++","OS Linux","Cycle en V"]
 },
 {
@@ -62,7 +62,7 @@ const DATA_EXPERIENCES = [
     duration : "7 mois",
     title : "Qualification du processus de production de la valves IC03",
     description: "Stage de 4 mois puis embauche.\nAnalyse de données de mesure de pièces.\n Qualification de la répétabilité et reproductibilité des pièces critiques.\nProposition et conception d'un outil de mesure pour une pièce complexe.\nPréparation de rapports, et exposition des résultats devant un client (Snecma)",
-    skills : ["Anglais","Documentation","Excel","Autonomie","CAO", ]
+    skills : ["Anglais","Documentation","Autonomie"]
 },
 ]
 

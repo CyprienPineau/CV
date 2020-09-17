@@ -32,7 +32,7 @@ class Header extends Component {
             </nav>
             <div className={this.props.isSideMenuShown ? "header-textbox sidemenuopen" : "header-textbox"}>
                 <h1 className={this.props.isSideMenuShown ? "header-textbox-title sidemenuopen" : "header-textbox-title"}>Cyprien PINEAU</h1>
-                <p className="header-textbox-introduction">Bonjour je suis un jeune ingénieur dynamique, je viens de finir de mettre en ligne mon site internet !</p>
+                <p className="header-textbox-introduction">« Je cherche à mettre ma créativité et force de proposition au profit de projets innovants en apportant une vision sortant des sentiers battus. »</p>
             </div>
             <img 
                 className={this.props.isSideMenuShown ? "header-pofileimg sidemenuopen" : "header-pofileimg"}

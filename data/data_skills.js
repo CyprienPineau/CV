@@ -24,13 +24,13 @@ const DATA_SKILLS = [
         catégorie:"Développement",
         masterList:[
             {
-                name:"C/C++",
-                duration:"2 ans",
+                name:"ReactNative",
+                duration:"1 ans",
                 note:""
             },
             {
-                name:"ReactNative",
-                duration:"1 ans",
+                name:"C/C++",
+                duration:"2 ans",
                 note:""
             },
             {
@@ -46,8 +46,12 @@ const DATA_SKILLS = [
         ],
         juniorList:[
             {
+                name:"ReactJS",
+                note:"Utilisé pour la conception de ce site"
+            },
+            {
                 name:"Python",
-                note:""
+                note:"Utilisation pour un projet de pilotage de drones en école (1 ans)"
             },
         ]
     },
@@ -72,8 +76,8 @@ const DATA_SKILLS = [
         ],
         juniorList:[
             {
-                name:"Blender",
-                note:""
+                name:"Figma",
+                note:"Utilisé pour la conception de ce site"
             },
         ]
     },
@@ -104,12 +108,12 @@ const DATA_SKILLS = [
             {
                 name:"Equipe de 2 ingénieurs",
                 duration:"3 mois",
-                note:""
+                note:"Menant le choix de refonte complète du projet, j'ai pu coordonner deux jeunes ingénieurs de manière décomposer le programme en module pour en assurrer la maintenabilité."
             },
             {
                 name:"Président d’association",
                 duration:"1 ans",
-                note:"En 2015, direction d'un club de musique composé de 12 membres du bureau, 70 adhérents"
+                note:"En 2015, direction d'un club de musique composé de 12 membres du bureau, 70 adhérents\nOrguanisation de diverses concerts\nCréation de l'ESIGELEC à un Incroyable talent"
             },
         ],
         juniorList:[]
