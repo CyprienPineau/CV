@@ -22,11 +22,10 @@ class Experience extends Component {
         return <div id={"exp"+ this.props.experience.id} className="experience">
             <div className="experience-header">
                 <p className="experience-date">{this.props.experience.date}</p>
-                {/* <p className="experience-duration">{this.props.experience.duration}</p> */}
             </div>
             <div className="experience-corps">
                 <h4>
-                    <span className="experience-work">{this.props.experience.work}</span>                    
+                    <span className={this.props.isSideMenuShown ? "experience-work sidemenuopen" : "experience-work"}>{this.props.experience.work}</span>                    
                     <br/>
                     <span className="experience-entreprise">{this.props.experience.entreprise}</span>
                     <a href={this.props.experience.locationRef} target="_blank" className="experience-location">
@@ -60,6 +59,7 @@ class ExperienceList extends Component {
                 experience={experience} 
                 key={key}
                 showSideMenu={this.props.showSideMenu}
+                isSideMenuShown={this.props.isSideMenuShown}
             />
         )
         return <div 

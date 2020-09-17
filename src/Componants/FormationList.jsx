@@ -14,7 +14,7 @@ class Formation extends Component {
             <div className="formation-header">
                 <p className="formation-date">2016</p>
             </div>
-            <div className="formation-corps-img">
+            <div className={this.props.isSideMenuShown ? "formation-corps-img sidemenuopen" : "formation-corps-img"}>
                     <img 
                         className="formation-corps-img-logo"
                         src={require("./../Ressources/LogoESIGELEC.svg")} 
@@ -23,7 +23,7 @@ class Formation extends Component {
             </div>
             <div className="formation-corps">
                 <h4>
-                    <span className="formation-name">Diplôme d'Ingénieur Généraliste</span>                    
+                    <span className={this.props.isSideMenuShown ? "formation-name sidemenuopen" : "formation-name"}>Diplôme d'Ingénieur Généraliste</span>                    
                     <br/>
                     <a 
                         href="https://www.google.com/maps/place/ESIGELEC+-+%C3%89cole+d'ing%C3%A9nieurs-es+g%C3%A9n%C3%A9raliste/@49.3832749,1.0746961,17z/data=!3m1!4b1!4m5!3m4!1s0x47e0dfc08f8fbfdd:0xd0dbc46c529975c2!8m2!3d49.3832749!4d1.0768848"
@@ -55,7 +55,9 @@ class formationList extends Component {
             className={this.props.isSideMenuShown ? "formationList sidemenuopen" : "formationList"}
         >
             <h2 className="formationList-title">Formation</h2>
-            <Formation/>
+            <Formation
+                isSideMenuShown={this.props.isSideMenuShown}
+            />
         </div>
     }
 }

@@ -98,10 +98,16 @@
     .experienceList { 
         padding: 30px 0px 30px 0px;
     }
+    .experience-work{
+        font-size: 30px;
+    }
 }
 /* 700px + size menu(350)  */
 @media (max-width: 1050px) {
     .experienceList.sidemenuopen { 
         padding: 30px 0px 30px 0px;
+    }
+    .experience-work.sidemenuopen{
+        font-size: 30px;
     }
 }

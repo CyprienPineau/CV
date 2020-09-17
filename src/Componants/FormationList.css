@@ -101,10 +101,19 @@
     .formation-corps-img{
         height: 200px;
     }
+    .formation-name{
+        font-size: 30px;
+    }
 }
 /* 700px + size menu(350)  */
 @media (max-width: 1050px) {
     .formationList.sidemenuopen { 
         padding: 30px 0px 30px 0px;
+    }
+    .formation-corps-img.sidemenuopen{
+        height: 200px;
+    }
+    .formation-name.sidemenuopen{
+        font-size: 30px;
     }
 }
