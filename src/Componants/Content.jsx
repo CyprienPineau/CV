@@ -4,7 +4,7 @@ import './Content.css'
 import ExperienceList from './ExperienceList'
 import SkillsList from './SkillsList'
 import FormationList from './FormationList'
-
+import Footer from './Footer'
 
 class Content extends Component {
     render() { 
@@ -22,9 +22,9 @@ class Content extends Component {
                 isSideMenuShown = {this.props.isSideMenuShown}
             />
 
-            <div>
-                liens externe
-            </div>
+            <Footer
+                // isSideMenuShown = {this.props.isSideMenuShown}
+            />
             
         </div>
     }

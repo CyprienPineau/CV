@@ -1,0 +1,36 @@
+@import './../TemplateStyleSeting.css';
+
+.footer{
+    background-color: var(--DarkTertiary);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.footer-returnatthetop{
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--MiddlePrimary);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 999px;
+    transition: 0.4s;
+}
+.footer-returnatthetop:hover{
+    background-color: var(--MiddlePrimary);
+    color: var(--BrightPrimary);
+}
+.footer-returnatthetop-svg {
+    margin-right: 15px;    
+}
+.footer-returnatthetop-svg line{
+    stroke: var(--MiddlePrimary);
+    transition: 0.4s;  
+}
+.footer-returnatthetop:hover .footer-returnatthetop-svg line{
+    stroke: var(--BrightPrimary);   
+}

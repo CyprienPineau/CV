@@ -12,7 +12,7 @@ class Header extends Component {
     }
 
     render() { 
-        return <div className={this.props.isSideMenuShown ? "header sidemenuopen" : "header"}>
+        return <div id='header' className={this.props.isSideMenuShown ? "header sidemenuopen" : "header"}>
             <nav>
                 <ul className={this.props.isSideMenuShown ? "header-navbar sidemenuopen" : "header-navbar"}>
                     <li className="header-navbar-button">
