@@ -1,0 +1,71 @@
+@import './../TemplateStyleSeting.css';
+
+.home{
+    padding: 40px 80px 40px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    transition: 0.4s;
+}
+.home-pofileimg {
+    height: 300px;
+    border: 3px solid var(--BrightSecondary);
+    border-radius: 9999px;
+    box-shadow: var(--StandardShadow);
+    transition: 0.4s;
+}
+.home-textbox {
+    /* flex:1; */
+    margin-right: 80px;
+    max-width: 600px;
+}
+.home-textbox-title {
+    color: var(--BrightPrimary);
+    font-weight: 200;
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-shadow: var(--StandardShadowText);
+}
+.home-textbox-introduction{
+    color: var(--BrightSecondary);
+    text-align: justify;
+    text-shadow: var(--StandardShadowText);
+    font-size: 18px;
+}
+
+/* RESPONSIVE PARAMETER */
+
+@media (max-width: 960px) {
+    .home{
+        padding: 80px 60px 30px 60px;
+    }
+    .home-textbox {
+        margin-right: 60px;
+    }
+    .home-textbox-title {
+        font-size: 50px;
+    }
+    .home-pofileimg{
+        height: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .home{
+        flex-direction: column-reverse;
+        padding: 10px 20px 10px 20px;
+    }
+    .home-textbox {
+        margin-right: 0px;
+    }
+    .home-textbox-title {
+        text-align: center;
+        font-size: 45px;
+    }
+    .home-pofileimg{
+        margin-bottom: 30px;
+    }
+}

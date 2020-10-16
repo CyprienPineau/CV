@@ -1,0 +1,33 @@
+@import './../TemplateStyleSeting.css';
+
+.intro{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: var(--DarkTertiary);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro.end{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: -100vh;
+    left: 0vh;
+    background-color: var(--DarkTertiary);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    transition: 0.7s ease-out;
+}
+
+.intro-text{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: lighter;
+}

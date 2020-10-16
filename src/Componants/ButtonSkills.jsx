@@ -27,3 +27,5 @@ class ButtonSkills extends Component {
 }
  
 export default ButtonSkills;
+
+// ajout de dinamique sur le bouton https://codepen.io/sfoxy/pen/XpOoJe

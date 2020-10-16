@@ -1,72 +1,36 @@
 import React, {Component} from 'react'
 import ReactDOM, {render} from 'react-dom'
-import './index.css'
+import {BrowserRouter,Switch, Route, Link} from "react-router-dom";
 
-import Header from './Componants/Header.jsx'
-import Content from './Componants/Content.jsx'
-import SideMenu from './Componants/SideMenu'
-import RSC from "react-scrollbars-custom";
+import './index.css';
 
-class Home extends Component {
-    
-    constructor(props){
-        super(props)
-        this.state = {
-            isSideMenuShown : false,
-            SideMenuSubject : '',
-        }
-        this.handleShowSideMenu = this.handleShowSideMenu.bind(this)
-        this.handleHideSideMenu = this.handleHideSideMenu.bind(this)
-    }
-    
-    // fonction permettant de faire apparaitre le volet
-    handleShowSideMenu(e){
-        // récupération des donnée data-user sur e.target.dataset.user pour avoir le sujet sélectonné
-        this.setState({isSideMenuShown : true, SideMenuSubject : e.target.dataset.user })
-    }
+import Home from './Componants/Home.jsx';
+import NavBar from './Componants/NavBar.jsx';
+import About from './Componants/About.jsx';
+import CV from './Componants/CV.jsx';
+import Portefolio from './Componants/Portefolio.jsx';
 
-    // fonction permettant de cacher le volet
-    handleHideSideMenu(){
-        this.setState({isSideMenuShown : false})
-    }
-
-    render() { 
-
-        return <div className="home">
-            <div className="home-maincontent">
-                <RSC className="home-maincontent-scrollbox">
-                    <Header
-                        isSideMenuShown = {this.state.isSideMenuShown}
-                    />
-                    <Content
-                        showSideMenu={this.handleShowSideMenu}
-                        isSideMenuShown = {this.state.isSideMenuShown}
-                    />
-                </RSC>
-                {/* TODO a faire apparaitre au bon moment */}
-                {/* <a href="" className="home-maincontent-returnTop">
-                    <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="13.7071" y1="0.707108" x2="27.8492" y2="14.8492" stroke="white" strokeWidth="2"/>
-                        <line x1="14.8493" y1="0.707107" x2="0.707121" y2="14.8492" stroke="white" strokeWidth="2"/>
-                    </svg>
-                </a> */}
-            </div>
-            <SideMenu 
-                isShawn={this.state.isSideMenuShown}
-                subject={this.state.SideMenuSubject}
-                show={this.handleHideSideMenu}                
-            />
-        </div>;
-    }
-}
+// TODO enlever
+import Intro from './Componants/Intro.jsx';
+import Content from './Componants/Content.jsx';
 
 render(
-    <div className="mainpage">
-        <Home/>
-    </div>,
-    document.getElementById('app')    
-)
+    <BrowserRouter>
+        <div className="mainpage">
+        
+            <Intro/>
+            <NavBar/>
+            <Switch onChange={()=>console.log("change")}>
+                <Route component={About} path="/about" />
+                <Route component={CV} path="/CV" />
+                <Route component={Portefolio} path="/Portefolio" />
+                <Route component={Home} path="/" />
+            </Switch>
 
+            {/* <Home/> */}
+        </div>
+    </BrowserRouter>, document.getElementById('app')    
+)
 
 // ScrollbarCustom
 // https://github.com/xobotyi/react-scrollbars-custom

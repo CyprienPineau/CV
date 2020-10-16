@@ -11,9 +11,11 @@
 .skill-button{
     padding:10px 15px 10px 15px;
     background-color: var(--DarkSecondary);
+    /* TODO a ajuster */
+    background-color: #344958;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
-    border: 3px solid var(--MiddlePrimary);
+    border: 0px solid var(--MiddlePrimary);
     border-radius: 5px;
     color: var(--MiddlePrimary);
     font-size: 20px;
@@ -23,6 +25,8 @@
 }
 .skill-button:hover{
     background-color: var(--MiddlePrimary);
+    /* TODO a ajuster */
+    background-color: #3c5566;
     color: var(--BrightPrimary);
 }
 .skill-button:active{
@@ -33,6 +37,8 @@
 
 .skill-duration{
     background-color:var(--DarkPrimary);
+    /* TODO a ajuster */
+    background-color:#2a3944;
     padding: 5px 20px 5px 20px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;

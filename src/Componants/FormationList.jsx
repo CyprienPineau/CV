@@ -19,7 +19,7 @@ class Formation extends Component {
                 <div className="formation-corps-img-transparency">
                     <img 
                         className="formation-corps-img-logo"
-                        src={require("./../Ressources/LogoESIGELEC.svg")} 
+                        src={require("./../../Ressources/LogoESIGELEC.svg")} 
                         alt="Logo Esigelec"
                     />
                 </div> 

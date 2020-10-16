@@ -26,11 +26,10 @@
     min-width: 250px;
     width: 100%;
     box-shadow: var(--StandardShadow);
-    border-radius: 5px;
+    border-radius: 0px;
 }
 .formation-header{
     display: flex;
-    /* background-color: var(--MiddlePrimary); */
     align-items: center;
     justify-content: center;
 }
@@ -40,7 +39,7 @@
     flex-direction: column;
 }
 .formation-corps-img{
-    background-image: url("./../Ressources/ImgBackgroundESIGELEC.png");
+    background-image: url("./../../Ressources/ImgBackgroundESIGELEC.png");
     background-position: center;
     height: 300px;
     display: flex;

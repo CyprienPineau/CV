@@ -6,6 +6,8 @@
     padding:0px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* TODO : Amériorer le scroll */
+    scroll-behavior: smooth; 
 }
 body {
     background-color: #222222;
@@ -16,47 +18,8 @@ body {
     position: fixed;
     height : 100%;
     width : 100%;
-    background-color:var(--MiddlePrimary);
+    background-color:var(--DarkPrimary);    
+    background-image: url("./../Ressources/background-1487545_1920.jpg");
     display : flex;  
-    flex-direction: row;
-}
-
-/* home */
-.home{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    background-image: url("./Ressources/background-1487545_1920.jpg");
-    transition: 0.4;
-}
-.home-maincontent{
-    height: 100%;
-    flex:1;
-}
-
-.home-maincontent-returnTop{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    left: 15px ;
-    margin-top: -65px;
-    border-radius: 50px;
-    background-color: var(--MiddleSecondary);
-    border: 3px solid var(--MiddlePrimary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.home-maincontent-returnTop:hover{
-    border-color: var(--BrightPrimary);
-}
-.home-maincontent-returnTop:active{
-    background-color: var(--DarkSecondary);
-}
-.home-maincontent-returnTop svg line{
-    stroke: var(--MiddlePrimary);
-}
-.home-maincontent-returnTop:hover svg line{
-    stroke: var(--BrightPrimary);
+    flex-direction: column;
 }
