@@ -19,7 +19,7 @@ body {
     height : 100%;
     width : 100%;
     background-color:var(--DarkPrimary);    
-    background-image: url("./../Ressources/background-1487545_1920.jpg");
+    background-image: url("./../public/background.jpg");
     display : flex;  
     flex-direction: column;
 }

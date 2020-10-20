@@ -1,37 +1,106 @@
 @import './../TemplateStyleSeting.css';
 
 .portefolio{
-    /* background-image: url("./../../Ressources/NewSOA1.jpg"); */
     width: 100%;
     height: 100%;
-    overflow:hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    /* align-items: center; */
     background-color: var(--DarkPrimary);
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
-/* temp in working */
-.imgworking{
-    height: 200px;
-    margin-bottom: 20px;
+.porfolio-slide{
+    min-width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    overflow: hidden;
 }
 
-.working{
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: lighter;
+.portefolio-buttonLeft{
+    left: 0px;
+    position: absolute;
+    display: block;
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+    transition: 0.5s;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
+    align-items: center;
 }
 
+.portefolio-buttonRight{
+    right: 0px;
+    position: absolute;
+    display: block;
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+    transition: 0.5s;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+    align-items: center;
+}
 
-/* working */
+.portefolio-buttonRight:hover{
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+    width: 15%;
+    transition: 0.5s;
+}
+
+.portefolio-buttonLeft:hover{
+    background: linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%);
+    width: 15%;
+    transition: 0.5s;
+}
+
+.portefolio-buttonRight svg path, .portefolio-buttonLeft svg path{
+    fill:rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+.portefolio-buttonRight:hover svg path,.portefolio-buttonLeft:hover svg path{
+    fill:rgba(255, 255, 255, 0.50);
+    transition: 0.5s;
+}
+
+.portefolio-pageindicator{
+    position: absolute;
+    bottom: 10%;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.portefolio-pageindicator-active{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+.portefolio-pageindicator-unactive{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.50);
+    transform: rotate(45deg);
+}
+
 .portefolio-section{
-    background: url("./../../Ressources/NewSOA1.jpg") center center;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: auto;
 }
 
 .portefolio-section-filter{
@@ -50,16 +119,6 @@
 
 .portefolio-section-button{
     padding: 10px 25px;
-    background-color: var(--SoaThemeHighlight);
-    border-radius: 5px;
-    border-width: 0px;
-    font-size: 20px;
-    color: #ffffff;
-}
-
-.portefolio-section-button{
-    padding: 10px 25px;
-    background-color: var(--SoaThemeHighlight);
     border-radius: 5px;
     border-width: 0px;
     font-size: 20px;

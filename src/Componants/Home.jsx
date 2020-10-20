@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './Home.css'
-import imageCyprienP from "./../../Ressources/CyprienP.jpg"
+import imageCyprienP from "./../../public/CyprienP.jpg"
 
 class Home extends Component {
     constructor(props){

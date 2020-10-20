@@ -39,7 +39,7 @@
     flex-direction: column;
 }
 .formation-corps-img{
-    background-image: url("./../../Ressources/ImgBackgroundESIGELEC.png");
+    background-image: url("./../../public/CV/ImgBackgroundESIGELEC.png");
     background-position: center;
     height: 300px;
     display: flex;

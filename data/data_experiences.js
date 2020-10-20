@@ -1,9 +1,14 @@
+import imgOpenEra from './../public/CV/OpenEra.png'
+import imgSafran from './../public/CV/Safran.png'
+import imgAusy from './../public/CV/Ausy.png'
+import imgIMIPrecision from './../public/CV/IMIPrecision.png'
+
 const DATA_EXPERIENCES = [
 {
     id : '1',
     work : "LEAD UX/UI",
     entreprise : "OpenEra",
-    imgRef : "./../../Ressources/OpenEra.png",
+    imgRef : imgOpenEra,
     location : "Lyon",
     locationRef : "https://www.google.com/maps/place/Lyon/@45.7579341,4.7650812,12z/data=!3m1!4b1!4m5!3m4!1s0x47f4ea516ae88797:0x408ab2ae4bb21f0!8m2!3d45.764043!4d4.835659",
     date : "Décembre 2018 à Août 2020",
@@ -15,8 +20,8 @@ const DATA_EXPERIENCES = [
 {
     id : '2',
     work: "DÉVELOPPEUR R&D",
-    entreprise : "Ausy",
-    imgRef : "./../../Ressources/Ausy.png",
+    entreprise : imgAusy,
+    imgRef : "./../../public/Ausy.png",
     location : "Sèvres",
     locationRef : "https://www.google.com/maps/place/Groupe+AUSY/@48.826711,2.2225863,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67a844cde1a93:0x630d1d27b4ff147e!8m2!3d48.826711!4d2.224775",
     date : "Septembre à Novembre 2018",
@@ -28,8 +33,8 @@ const DATA_EXPERIENCES = [
 {
     id : '3',
     work : "DÉVELOPPEUR INTEGRATEUR",
-    entreprise : "Safran",
-    imgRef : "./../../Ressources/Safran.png",
+    entreprise : imgSafran,
+    imgRef : "./../../public/Safran.png",
     location : "Massy",
     locationRef : "https://www.google.com/maps/place/Safran+Electronics+%26+Defense/@48.7245298,2.2644159,17z/data=!4m8!1m2!2m1!1ssafran+electronics+%26+defense!3m4!1s0x0:0x98565794f8dd3bda!8m2!3d48.7245263!4d2.2666099",
     date : "Mars à Août 2018",
@@ -41,8 +46,8 @@ const DATA_EXPERIENCES = [
 {
     id : '4',
     work: "DÉVELOPPEUR",
-    entreprise : "Safran",
-    imgRef : "./../../Ressources/Safran.png",
+    entreprise : imgSafran,
+    imgRef : "./../../public/Safran.png",
     location : "Massy",
     locationRef : "https://www.google.com/maps/place/Safran+Electronics+%26+Defense/@48.7245298,2.2644159,17z/data=!4m8!1m2!2m1!1ssafran+electronics+%26+defense!3m4!1s0x0:0x98565794f8dd3bda!8m2!3d48.7245263!4d2.2666099",
     date : "Mars 2017 à Fevrier 2018",
@@ -55,7 +60,7 @@ const DATA_EXPERIENCES = [
     id : '5',
     work: "INGENIEUR QUALITE",
     entreprise : "IMI Precision Engineering",
-    imgRef : "./../../Ressources/IMI.png",
+    imgRef : imgIMIPrecision,
     location : "Poole, Angleterre",
     locationRef : "https://www.google.com/maps/place/IMI+Precision+Engineering/@50.7443638,-1.9991816,15z/data=!4m2!3m1!1s0x0:0xd30f237e990da81d?sa=X&ved=2ahUKEwjcl7WT7-rrAhUaCWMBHZSwBgsQ_BIwCnoECBgQCA",
     date : "Mai 2016 à Décembre 2016",

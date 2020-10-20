@@ -12,13 +12,12 @@ import Portefolio from './Componants/Portefolio.jsx';
 
 // TODO enlever
 import Intro from './Componants/Intro.jsx';
-import Content from './Componants/Content.jsx';
 
 render(
     <BrowserRouter>
         <div className="mainpage">
         
-            <Intro/>
+            {/* <Intro/> */} 
             <NavBar/>
             <Switch onChange={()=>console.log("change")}>
                 <Route component={About} path="/about" />
@@ -26,8 +25,6 @@ render(
                 <Route component={Portefolio} path="/Portefolio" />
                 <Route component={Home} path="/" />
             </Switch>
-
-            {/* <Home/> */}
         </div>
     </BrowserRouter>, document.getElementById('app')    
 )
