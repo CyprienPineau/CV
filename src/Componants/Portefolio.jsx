@@ -6,7 +6,10 @@ import DATA_PORTEFOLIO from './../../data/data_porfolio'
 
 function Section ({section}) {
 
-    return <div className="portefolio-section" style={{background: `url(${section.background}) center center`}}>
+    return <div className="portefolio-section" 
+        style={{
+            backgroundImage: `url(${section.background})`
+            }}>
         <div 
             className="portefolio-section-filter"  
             style={{backgroundColor: section.backgroundColor}}
@@ -18,7 +21,6 @@ function Section ({section}) {
                 >
                     {/* Consulter */}
                     <p className="working">En cours de réalisation...</p>
-                    <p className="working">N'hésitez pas à revenir plus tard !</p>
             </a>
         </div>
     </div> 

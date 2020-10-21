@@ -9,6 +9,7 @@ import NavBar from './Componants/NavBar.jsx';
 import About from './Componants/About.jsx';
 import CV from './Componants/CV.jsx';
 import Portefolio from './Componants/Portefolio.jsx';
+import PortefolioZoom from './Componants/PortefolioZoom.jsx';
 
 // TODO enlever
 import Intro from './Componants/Intro.jsx';
@@ -23,6 +24,7 @@ render(
                 <Route component={About} path="/about" />
                 <Route component={CV} path="/CV" />
                 <Route component={Portefolio} path="/Portefolio" />
+                {/* <Route component={PortefolioZoom} path="/Portefolio" /> */}
                 <Route component={Home} path="/" />
             </Switch>
         </div>
