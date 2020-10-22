@@ -9,9 +9,7 @@ import backgroudGoolidays from './../public/Goolidays/backgroudGoolidays.jpg'
 
 // AtelierDesLogos
 import logoAtelierDesLogos from './../public/AtelierDesLogos/logoAtelierDesLogos.png'
-import backgroudAtelierDesLogos from './../public/AtelierDesLogos/backgroudAtelierDesLogos.jpg'
-
-// Photo de Kaboompics .com provenant de Pexels
+import backgroudAtelierDesLogos from './../public/AtelierDesLogos/backgroudAtelierDesLogos.jpg' // Photo de Kaboompics .com provenant de Pexels
 
 const DATA_PORTEFOLIO = [
     {
@@ -41,13 +39,13 @@ const DATA_PORTEFOLIO = [
                 title:"Prototype",
                 content:"Le prototype de l’application de Spirit of Adventure doit montrer l'intérêt de ce type de support pour le jeu de rôle.\nNous avons donc choisi les fonctionnalités minimales pour profiter d’une expérience maximum.\nContrainte supplémentaire : les interfaces doivent être conceptualisées de manière à laisser la possibilité d'être agrémentées de mise à jour.\n\nJe suis donc responsable de créer ces interfaces, d’abord en wireframe puis une fois validé par l’équipe, sous React Native.\n\nPour cela il faut garder notre type d’utilisateur à l'esprit :\n- Il ne connaît pas forcément le jeu de rôle\n- Il n'appartient pas nécessairement à un groupe de joueurs\n- Il veut jouer sans prise de tête\n- Il souhaite commencer à jouer rapidement ou ...\n- ... il souhaite créer facilement des scénarios pour les proposer à ces joueurs",
                 img:DefiDesBarmans,
-                video:"https://www.youtube.com/embed/OrRiXaDz530"
+                video:"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FOpenEraStudio%2Fvideos%2F617191542148512%2F&show_text=0&width=560&autoplay=1&mute=1"
             },
             {
                 title:"Le défi des barmans",
                 content:"L'événement met en scène des barmans de différents bars à jeux de Lyon dans un “actual play” autour d’un univers Aztèque. Je mets donc au point une video de présentation permettant aux spectateurs de rentrer dans l’ambiance.\nPour l’aspect conte ancien, je choisis de dessiner selon un style esquisse. Cela rajoute un aspect vivant à chaque dessin tout en restant simple pour garder l’attention du spectateur sur la voie narrative.\n\nAussi dans la foulée, je conceptualise une video de présentation des personnages et des participants. Cette fois l’objectif est différent : cette présentation devra être également un générique récurrent une fois les videos mises en sur Youtube. Changement de ton, il faut du dynamisme : une musique entrainante mésoaméricaine est ajoutée, les dessins sont plus détaillés, et les animations sont calées sur la musique.",
                 img:DefiDesBarmans,
-                video:"https://www.youtube.com/embed/OrRiXaDz530"
+                video:"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FOpenEraStudio%2Fvideos%2F179386196717183%2F&show_text=0&width=560&autoplay=1&mute=1"
             }   
         ]
     },

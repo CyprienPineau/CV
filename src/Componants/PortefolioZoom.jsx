@@ -11,9 +11,10 @@ function Section ({section, rawNumber}){
     let displayAlignContent = (rawNumber%2==0) ? "flex-start" : "flex-end"
 
     return <div className="section" style={{flexDirection:displayDirection}}>
-        <div className="section-video" style={{backgroundImage: `url(${section.img})`, justifyContent:displayAlignVideo}}>
-            { section.video != "" && 
-                <iframe className="section-video-frame" width="560" height="315" src={section.video} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
+        <div className="section-video" style={{backgroundImage: `url(${section.img})`, alignItems:displayAlignVideo}}>
+            { section.video != "" && <div className="videowrapper">
+                    <iframe className="section-video-frame" src={section.video} width="100%" height="100%" scrolling="no" frameBorder="1" allowFullScreen/>
+                </div>
             }
         </div>
 
