@@ -38054,28 +38054,32 @@ var DATA_PORTEFOLIO = [{
     img: "",
     video: ""
   }]
-}, {
-  name: "L'atelier des Logos",
-  logo: _logoAtelierDesLogos.default,
-  background: _backgroudAtelierDesLogos.default,
-  backgroundColor: "#262626E3",
-  primarycolor: "#262626",
-  secondaryColor: "#303030",
-  hightlightColor: "#316A7C",
-  noteIntroduction: "avec la société Open Era",
-  Introduction: "Graphiste pour le site de recontre entre voyageur",
-  paragraph: [{
-    title: "Identité graphique",
-    content: "Je suis intervenu en tant que graphiste dans ce projet de réseau social autour du thème du voyage. Je me suis occupé de la création de Logo, page d’accueil et tracts.\nCes créations se sont basées sur deux idées : le voyage et le partage.\nCe fut ma première aventure de projet de site web. Le projet n’existe malheureusement plus, pour des soucis de perspectives et financements.",
-    img: "",
-    video: ""
-  }, {
-    title: "",
-    content: "",
-    img: "",
-    video: ""
-  }]
-}];
+} // {
+//     name : "L'atelier des Logos",
+//     logo : logoAtelierDesLogos,
+//     background : backgroudAtelierDesLogos,
+//     backgroundColor:"#262626E3",
+//     primarycolor:"#262626",
+//     secondaryColor:"#303030",
+//     hightlightColor:"#316A7C",
+//     noteIntroduction : "avec la société Open Era",
+//     Introduction : "Graphiste pour le site de recontre entre voyageur",
+//     paragraph:[
+//         {
+//             title:"Identité graphique",
+//             content:"Je suis intervenu en tant que graphiste dans ce projet de réseau social autour du thème du voyage. Je me suis occupé de la création de Logo, page d’accueil et tracts.\nCes créations se sont basées sur deux idées : le voyage et le partage.\nCe fut ma première aventure de projet de site web. Le projet n’existe malheureusement plus, pour des soucis de perspectives et financements.",
+//             img:"",
+//             video:""
+//         },
+//         {
+//             title:"",
+//             content:"",
+//             img:"",
+//             video:""
+//         }
+//     ]
+// }
+];
 var _default = DATA_PORTEFOLIO;
 exports.default = _default;
 },{"./../public/SpiritOfAdventure/logoSpiritOfAdventure.png":"public/SpiritOfAdventure/logoSpiritOfAdventure.png","./../public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg":"public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg","./../public/SpiritOfAdventure/Fond.jpg":"public/SpiritOfAdventure/Fond.jpg","./../public/Goolidays/logoGoolidays.png":"public/Goolidays/logoGoolidays.png","./../public/Goolidays/backgroudGoolidays.jpg":"public/Goolidays/backgroudGoolidays.jpg","./../public/AtelierDesLogos/logoAtelierDesLogos.png":"public/AtelierDesLogos/logoAtelierDesLogos.png","./../public/AtelierDesLogos/backgroudAtelierDesLogos.jpg":"public/AtelierDesLogos/backgroudAtelierDesLogos.jpg"}],"src/Componants/Portefolio.jsx":[function(require,module,exports) {
@@ -38350,7 +38354,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // TODO enlever
 (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement("div", {
   className: "mainpage"
-}, /*#__PURE__*/_react.default.createElement(_NavBar.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, {
+}, /*#__PURE__*/_react.default.createElement(_Intro.default, null), /*#__PURE__*/_react.default.createElement(_NavBar.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, {
   onChange: function onChange() {
     return console.log("change");
   }

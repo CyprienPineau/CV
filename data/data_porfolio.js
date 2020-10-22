@@ -74,31 +74,31 @@ const DATA_PORTEFOLIO = [
             }
         ]
     },
-    {
-        name : "L'atelier des Logos",
-        logo : logoAtelierDesLogos,
-        background : backgroudAtelierDesLogos,
-        backgroundColor:"#262626E3",
-        primarycolor:"#262626",
-        secondaryColor:"#303030",
-        hightlightColor:"#316A7C",
-        noteIntroduction : "avec la société Open Era",
-        Introduction : "Graphiste pour le site de recontre entre voyageur",
-        paragraph:[
-            {
-                title:"Identité graphique",
-                content:"Je suis intervenu en tant que graphiste dans ce projet de réseau social autour du thème du voyage. Je me suis occupé de la création de Logo, page d’accueil et tracts.\nCes créations se sont basées sur deux idées : le voyage et le partage.\nCe fut ma première aventure de projet de site web. Le projet n’existe malheureusement plus, pour des soucis de perspectives et financements.",
-                img:"",
-                video:""
-            },
-            {
-                title:"",
-                content:"",
-                img:"",
-                video:""
-            }
-        ]
-    }
+    // {
+    //     name : "L'atelier des Logos",
+    //     logo : logoAtelierDesLogos,
+    //     background : backgroudAtelierDesLogos,
+    //     backgroundColor:"#262626E3",
+    //     primarycolor:"#262626",
+    //     secondaryColor:"#303030",
+    //     hightlightColor:"#316A7C",
+    //     noteIntroduction : "avec la société Open Era",
+    //     Introduction : "Graphiste pour le site de recontre entre voyageur",
+    //     paragraph:[
+    //         {
+    //             title:"Identité graphique",
+    //             content:"Je suis intervenu en tant que graphiste dans ce projet de réseau social autour du thème du voyage. Je me suis occupé de la création de Logo, page d’accueil et tracts.\nCes créations se sont basées sur deux idées : le voyage et le partage.\nCe fut ma première aventure de projet de site web. Le projet n’existe malheureusement plus, pour des soucis de perspectives et financements.",
+    //             img:"",
+    //             video:""
+    //         },
+    //         {
+    //             title:"",
+    //             content:"",
+    //             img:"",
+    //             video:""
+    //         }
+    //     ]
+    // }
 ]
 
 export default DATA_PORTEFOLIO;
