@@ -37960,9 +37960,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/css-loader.js"}],"public/SpiritOfAdventure/LogoSpiritOfAdventure.png":[function(require,module,exports) {
-module.exports = "/LogoSpiritOfAdventure.1964de53.png";
-},{}],"public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/css-loader.js"}],"public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg":[function(require,module,exports) {
 module.exports = "/backgroudSpiritOfAdventure.ecee75b3.jpg";
 },{}],"public/SpiritOfAdventure/Fond.jpg":[function(require,module,exports) {
 module.exports = "/Fond.ba73f650.jpg";
@@ -37982,7 +37980,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _LogoSpiritOfAdventure = _interopRequireDefault(require("./../public/SpiritOfAdventure/LogoSpiritOfAdventure.png"));
+var _LogoESIGELEC = _interopRequireDefault(require("./../public/CV/LogoESIGELEC.svg"));
 
 var _backgroudSpiritOfAdventure = _interopRequireDefault(require("./../public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg"));
 
@@ -37999,12 +37997,13 @@ var _backgroudAtelierDesLogos = _interopRequireDefault(require("./../public/Atel
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Spirit of adventure
+// import logoSpiritOfAdventure from './../public/SpiritOfAdventure/LogoSpiritOfAdventure.png'
 // Goolidays
 // AtelierDesLogos
 // Photo de Kaboompics .com provenant de Pexels
 var DATA_PORTEFOLIO = [{
   name: "Spirit of Adventure",
-  logo: _LogoSpiritOfAdventure.default,
+  logo: _LogoESIGELEC.default,
   background: _backgroudSpiritOfAdventure.default,
   backgroundColor: "1F1A18E3",
   primarycolor: "#1F1A18",
@@ -38078,7 +38077,7 @@ var DATA_PORTEFOLIO = [{
 }];
 var _default = DATA_PORTEFOLIO;
 exports.default = _default;
-},{"./../public/SpiritOfAdventure/LogoSpiritOfAdventure.png":"public/SpiritOfAdventure/LogoSpiritOfAdventure.png","./../public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg":"public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg","./../public/SpiritOfAdventure/Fond.jpg":"public/SpiritOfAdventure/Fond.jpg","./../public/Goolidays/logoGoolidays.png":"public/Goolidays/logoGoolidays.png","./../public/Goolidays/backgroudGoolidays.jpg":"public/Goolidays/backgroudGoolidays.jpg","./../public/AtelierDesLogos/logoAtelierDesLogos.png":"public/AtelierDesLogos/logoAtelierDesLogos.png","./../public/AtelierDesLogos/backgroudAtelierDesLogos.jpg":"public/AtelierDesLogos/backgroudAtelierDesLogos.jpg"}],"src/Componants/Portefolio.jsx":[function(require,module,exports) {
+},{"./../public/CV/LogoESIGELEC.svg":"public/CV/LogoESIGELEC.svg","./../public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg":"public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg","./../public/SpiritOfAdventure/Fond.jpg":"public/SpiritOfAdventure/Fond.jpg","./../public/Goolidays/logoGoolidays.png":"public/Goolidays/logoGoolidays.png","./../public/Goolidays/backgroudGoolidays.jpg":"public/Goolidays/backgroudGoolidays.jpg","./../public/AtelierDesLogos/logoAtelierDesLogos.png":"public/AtelierDesLogos/logoAtelierDesLogos.png","./../public/AtelierDesLogos/backgroudAtelierDesLogos.jpg":"public/AtelierDesLogos/backgroudAtelierDesLogos.jpg"}],"src/Componants/Portefolio.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

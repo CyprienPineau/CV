@@ -1,5 +1,6 @@
 // Spirit of adventure
-import logoSpiritOfAdventure from './../public/SpiritOfAdventure/LogoSpiritOfAdventure.png'
+import logoSpiritOfAdventure from './../public/CV/LogoESIGELEC.svg'
+// import logoSpiritOfAdventure from './../public/SpiritOfAdventure/LogoSpiritOfAdventure.png'
 import backgroudSpiritOfAdventure from './../public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg'
 import DefiDesBarmans from './../public/SpiritOfAdventure/Fond.jpg'
 
