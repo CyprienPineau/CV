@@ -41,10 +41,10 @@ class NavBar extends Component {
                 <div className={ this.state.isCvSlected ? "navbar-button-cursor" : "navbar-button-nocursor"}/>
             </Link>
             
-            {/* <Link className="navbar-button" to ="/Portefolio" onClick={this.handleClickPorfolio}>
+            <Link className="navbar-button" to ="/Portefolio" onClick={this.handleClickPorfolio}>
                 <p>Portefolio</p>
                 <div className={ this.state.isPorfolioSlected ? "navbar-button-cursor" : "navbar-button-nocursor"}/>
-            </Link> */}
+            </Link>
         </div>;
     }
 }

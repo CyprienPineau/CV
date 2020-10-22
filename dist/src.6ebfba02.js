@@ -32603,6 +32603,12 @@ var NavBar = /*#__PURE__*/function (_Component) {
         onClick: this.handleClickCv
       }, /*#__PURE__*/_react.default.createElement("p", null, "CV"), /*#__PURE__*/_react.default.createElement("div", {
         className: this.state.isCvSlected ? "navbar-button-cursor" : "navbar-button-nocursor"
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        className: "navbar-button",
+        to: "/Portefolio",
+        onClick: this.handleClickPorfolio
+      }, /*#__PURE__*/_react.default.createElement("p", null, "Portefolio"), /*#__PURE__*/_react.default.createElement("div", {
+        className: this.state.isPorfolioSlected ? "navbar-button-cursor" : "navbar-button-nocursor"
       })));
     }
   }]);
@@ -37882,7 +37888,378 @@ var CV = /*#__PURE__*/function (_Component) {
 
 var _default = CV;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./CV.css":"src/Componants/CV.css","./Content.jsx":"src/Componants/Content.jsx","./SideMenu.jsx":"src/Componants/SideMenu.jsx","react-scrollbars-custom":"node_modules/react-scrollbars-custom/dist/rsc.esm.js"}],"src/Componants/Intro.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./CV.css":"src/Componants/CV.css","./Content.jsx":"src/Componants/Content.jsx","./SideMenu.jsx":"src/Componants/SideMenu.jsx","react-scrollbars-custom":"node_modules/react-scrollbars-custom/dist/rsc.esm.js"}],"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/bundle-url.js"}],"src/Componants/Portefolio.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/css-loader.js"}],"public/SpiritOfAdventure/LogoSpiritOfAdventure.png":[function(require,module,exports) {
+module.exports = "/LogoSpiritOfAdventure.1964de53.png";
+},{}],"public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg":[function(require,module,exports) {
+module.exports = "/backgroudSpiritOfAdventure.ecee75b3.jpg";
+},{}],"public/SpiritOfAdventure/Fond.jpg":[function(require,module,exports) {
+module.exports = "/Fond.ba73f650.jpg";
+},{}],"public/Goolidays/logoGoolidays.png":[function(require,module,exports) {
+module.exports = "/logoGoolidays.f2a23e64.png";
+},{}],"public/Goolidays/backgroudGoolidays.jpg":[function(require,module,exports) {
+module.exports = "/backgroudGoolidays.106e9f0a.jpg";
+},{}],"public/AtelierDesLogos/logoAtelierDesLogos.png":[function(require,module,exports) {
+module.exports = "/logoAtelierDesLogos.27f42ae9.png";
+},{}],"public/AtelierDesLogos/backgroudAtelierDesLogos.jpg":[function(require,module,exports) {
+module.exports = "/backgroudAtelierDesLogos.fc03b9c6.jpg";
+},{}],"data/data_porfolio.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _LogoSpiritOfAdventure = _interopRequireDefault(require("./../public/SpiritOfAdventure/LogoSpiritOfAdventure.png"));
+
+var _backgroudSpiritOfAdventure = _interopRequireDefault(require("./../public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg"));
+
+var _Fond = _interopRequireDefault(require("./../public/SpiritOfAdventure/Fond.jpg"));
+
+var _logoGoolidays = _interopRequireDefault(require("./../public/Goolidays/logoGoolidays.png"));
+
+var _backgroudGoolidays = _interopRequireDefault(require("./../public/Goolidays/backgroudGoolidays.jpg"));
+
+var _logoAtelierDesLogos = _interopRequireDefault(require("./../public/AtelierDesLogos/logoAtelierDesLogos.png"));
+
+var _backgroudAtelierDesLogos = _interopRequireDefault(require("./../public/AtelierDesLogos/backgroudAtelierDesLogos.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Spirit of adventure
+// Goolidays
+// AtelierDesLogos
+// Photo de Kaboompics .com provenant de Pexels
+var DATA_PORTEFOLIO = [{
+  name: "Spirit of Adventure",
+  logo: _LogoSpiritOfAdventure.default,
+  background: _backgroudSpiritOfAdventure.default,
+  backgroundColor: "1F1A18E3",
+  primarycolor: "#1F1A18",
+  secondaryColor: "#302521",
+  hightlightColor: "#EB4E22",
+  noteIntroduction: "avec la société Open Era",
+  Introduction: "Ce projet, réalisé avec trois autres ingénieurs, s’appelle Spirit of adventure. Il s’agit d’une application numérique permettant de jouer aux jeux de rôle, ensemble ou à distance.",
+  paragraph: [{
+    title: "Identité graphique",
+    content: "Le concept étant né, il faut maintenant créer une identité d'application. Pour ça nous avons fait référence à 3 mots : découverte, jeu et partage.\nC’était donc à moi de concevoir l’identité graphique lié notamment au logo.\n\nJ’ai choisi de représenter le mot “découverte” par une boussole, le mot “jeu” par un dé 20 faces (représentatif du domaine du jeu de rôle), et enfin le mot “partage” par le tournoiement naturel du logo, lui donnant par la même occasion du mouvement",
+    img: _Fond.default,
+    video: ""
+  }, {
+    title: "Kickstarter",
+    content: "Pour financer une première partie de notre projet, nous avons choisi de passer par un kickstarter. Celui ci n’a pas abouti. Nous avons identifié plusieurs problématiques notamment reliées à la professionnalisation de ce mode de financement et par le manque de concret de notre offre.\n\nJe me suis occupé de la présentation graphique de celui ci. L’utilisateur doit se sentir emmené dans l’aventure de notre projet. Pour cela j’ai réadapté une ambiance de la période de découverte des Amériques.",
+    img: _Fond.default,
+    video: ""
+  }, {
+    title: "Prototype",
+    content: "Le prototype de l’application de Spirit of Adventure doit montrer l'intérêt de ce type de support pour le jeu de rôle.\nNous avons donc choisi les fonctionnalités minimales pour profiter d’une expérience maximum.\nContrainte supplémentaire : les interfaces doivent être conceptualisées de manière à laisser la possibilité d'être agrémentées de mise à jour.\n\nJe suis donc responsable de créer ces interfaces, d’abord en wireframe puis une fois validé par l’équipe, sous React Native.\n\nPour cela il faut garder notre type d’utilisateur à l'esprit :\n- Il ne connaît pas forcément le jeu de rôle\n- Il n'appartient pas nécessairement à un groupe de joueurs\n- Il veut jouer sans prise de tête\n- Il souhaite commencer à jouer rapidement ou ...\n- ... il souhaite créer facilement des scénarios pour les proposer à ces joueurs",
+    img: _Fond.default,
+    video: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FOpenEraStudio%2Fvideos%2F617191542148512%2F&show_text=0&width=560&autoplay=1&mute=1"
+  }, {
+    title: "Le défi des barmans",
+    content: "L'événement met en scène des barmans de différents bars à jeux de Lyon dans un “actual play” autour d’un univers Aztèque. Je mets donc au point une video de présentation permettant aux spectateurs de rentrer dans l’ambiance.\nPour l’aspect conte ancien, je choisis de dessiner selon un style esquisse. Cela rajoute un aspect vivant à chaque dessin tout en restant simple pour garder l’attention du spectateur sur la voie narrative.\n\nAussi dans la foulée, je conceptualise une video de présentation des personnages et des participants. Cette fois l’objectif est différent : cette présentation devra être également un générique récurrent une fois les videos mises en sur Youtube. Changement de ton, il faut du dynamisme : une musique entrainante mésoaméricaine est ajoutée, les dessins sont plus détaillés, et les animations sont calées sur la musique.",
+    img: _Fond.default,
+    video: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FOpenEraStudio%2Fvideos%2F179386196717183%2F&show_text=0&width=560&autoplay=1&mute=1"
+  }]
+}, {
+  name: "Goolidays",
+  logo: _logoGoolidays.default,
+  background: _backgroudGoolidays.default,
+  backgroundColor: "#102115E3",
+  primarycolor: "#102115",
+  secondaryColor: "#122E1A",
+  hightlightColor: "#26A69A",
+  noteIntroduction: "avec la société Open Era",
+  Introduction: "Graphiste pour le site de recontre entre voyageur",
+  paragraph: [{
+    title: "Identité graphique",
+    content: "Je suis intervenu en tant que graphiste dans ce projet de réseau social autour du thème du voyage. Je me suis occupé de la création de Logo, page d’accueil et tracts.\nCes créations se sont basées sur deux idées : le voyage et le partage.\nCe fut ma première aventure de projet de site web. Le projet n’existe malheureusement plus, pour des soucis de perspectives et financements.",
+    img: "",
+    video: ""
+  }, {
+    title: "",
+    content: "",
+    img: "",
+    video: ""
+  }]
+}, {
+  name: "L'atelier des Logos",
+  logo: _logoAtelierDesLogos.default,
+  background: _backgroudAtelierDesLogos.default,
+  backgroundColor: "#262626E3",
+  primarycolor: "#262626",
+  secondaryColor: "#303030",
+  hightlightColor: "#316A7C",
+  noteIntroduction: "avec la société Open Era",
+  Introduction: "Graphiste pour le site de recontre entre voyageur",
+  paragraph: [{
+    title: "Identité graphique",
+    content: "Je suis intervenu en tant que graphiste dans ce projet de réseau social autour du thème du voyage. Je me suis occupé de la création de Logo, page d’accueil et tracts.\nCes créations se sont basées sur deux idées : le voyage et le partage.\nCe fut ma première aventure de projet de site web. Le projet n’existe malheureusement plus, pour des soucis de perspectives et financements.",
+    img: "",
+    video: ""
+  }, {
+    title: "",
+    content: "",
+    img: "",
+    video: ""
+  }]
+}];
+var _default = DATA_PORTEFOLIO;
+exports.default = _default;
+},{"./../public/SpiritOfAdventure/LogoSpiritOfAdventure.png":"public/SpiritOfAdventure/LogoSpiritOfAdventure.png","./../public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg":"public/SpiritOfAdventure/backgroudSpiritOfAdventure.jpg","./../public/SpiritOfAdventure/Fond.jpg":"public/SpiritOfAdventure/Fond.jpg","./../public/Goolidays/logoGoolidays.png":"public/Goolidays/logoGoolidays.png","./../public/Goolidays/backgroudGoolidays.jpg":"public/Goolidays/backgroudGoolidays.jpg","./../public/AtelierDesLogos/logoAtelierDesLogos.png":"public/AtelierDesLogos/logoAtelierDesLogos.png","./../public/AtelierDesLogos/backgroudAtelierDesLogos.jpg":"public/AtelierDesLogos/backgroudAtelierDesLogos.jpg"}],"src/Componants/Portefolio.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+require("./Portefolio.css");
+
+var _data_porfolio = _interopRequireDefault(require("./../../data/data_porfolio"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function Section(_ref) {
+  var section = _ref.section;
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "portefolio-section",
+    style: {
+      backgroundImage: "url(".concat(section.background, ")")
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "portefolio-section-filter",
+    style: {
+      backgroundColor: section.backgroundColor
+    }
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "portefolio-section-logo",
+    src: section.logo,
+    alt: "Logo de ..."
+  }), /*#__PURE__*/_react.default.createElement("a", {
+    className: "portefolio-section-button",
+    style: {
+      backgroundColor: section.hightlightColor
+    }
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "working"
+  }, "En cours de r\xE9alisation..."))));
+}
+
+var Portefolio = /*#__PURE__*/function (_Component) {
+  _inherits(Portefolio, _Component);
+
+  var _super = _createSuper(Portefolio);
+
+  function Portefolio(props) {
+    var _this;
+
+    _classCallCheck(this, Portefolio);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      index: 0
+    };
+    _this.handleGoRight = _this.handleGoRight.bind(_assertThisInitialized(_this));
+    _this.handleGoLeft = _this.handleGoLeft.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Portefolio, [{
+    key: "handleGoRight",
+    value: function handleGoRight() {
+      this.setState(function (lastState) {
+        return {
+          index: lastState.index + 1
+        };
+      });
+    }
+  }, {
+    key: "handleGoLeft",
+    value: function handleGoLeft() {
+      this.setState(function (lastState) {
+        return {
+          index: lastState.index - 1
+        };
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // obtention de l'index relatif au nombre maximum de sections
+      var indexRef = Math.abs(this.state.index % _data_porfolio.default.length);
+
+      var porfolioSections = _data_porfolio.default.map(function (section, key) {
+        return /*#__PURE__*/_react.default.createElement("div", {
+          key: key,
+          className: "porfolio-slide",
+          style: {
+            transform: "translateX(-".concat(indexRef * 100, "%")
+          }
+        }, /*#__PURE__*/_react.default.createElement(Section, {
+          section: section
+        }));
+      });
+
+      var porfolioIndicators = _data_porfolio.default.map(function (section, key) {
+        return /*#__PURE__*/_react.default.createElement("div", {
+          key: key,
+          className: indexRef == key ? "portefolio-pageindicator-active" : "portefolio-pageindicator-unactive"
+        });
+      });
+
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "portefolio"
+      }, /*#__PURE__*/_react.default.createElement("a", {
+        onClick: this.handleGoRight,
+        className: "portefolio-buttonRight"
+      }, /*#__PURE__*/_react.default.createElement("svg", {
+        width: "34",
+        height: "52",
+        viewBox: "0 0 34 52",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, /*#__PURE__*/_react.default.createElement("path", {
+        d: "M33.1421 26L7.14209 -2.27299e-06L7.14209 52L33.1421 26Z",
+        fill: "#EB4E22"
+      }), /*#__PURE__*/_react.default.createElement("rect", {
+        x: "7.07104",
+        y: "33",
+        width: "10",
+        height: "10",
+        transform: "rotate(-135 7.07104 33)",
+        fill: "white"
+      }))), porfolioSections, /*#__PURE__*/_react.default.createElement("a", {
+        onClick: this.handleGoLeft,
+        className: "portefolio-buttonLeft"
+      }, /*#__PURE__*/_react.default.createElement("svg", {
+        width: "34",
+        height: "52",
+        viewBox: "0 0 34 52",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, /*#__PURE__*/_react.default.createElement("path", {
+        d: "M-4.54598e-06 26L26 52L26 4.54598e-06L-4.54598e-06 26Z",
+        fill: "#EB4E22"
+      }), /*#__PURE__*/_react.default.createElement("rect", {
+        x: "26.071",
+        y: "19",
+        width: "10",
+        height: "10",
+        transform: "rotate(45 26.071 19)",
+        fill: "white"
+      }))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "portefolio-pageindicator"
+      }, porfolioIndicators));
+    }
+  }]);
+
+  return Portefolio;
+}(_react.Component);
+
+var _default = Portefolio;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./Portefolio.css":"src/Componants/Portefolio.css","./../../data/data_porfolio":"data/data_porfolio.js"}],"src/Componants/Intro.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -37959,6 +38336,8 @@ var _About = _interopRequireDefault(require("./Componants/About.jsx"));
 
 var _CV = _interopRequireDefault(require("./Componants/CV.jsx"));
 
+var _Portefolio = _interopRequireDefault(require("./Componants/Portefolio.jsx"));
+
 var _Intro = _interopRequireDefault(require("./Componants/Intro.jsx"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -37967,7 +38346,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-// import Portefolio from './Componants/Portefolio.jsx';
 // import PortefolioZoom from './Componants/PortefolioZoom.jsx';
 // TODO enlever
 (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement("div", {
@@ -37983,6 +38361,9 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
   component: _CV.default,
   path: "/CV"
 }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  component: _Portefolio.default,
+  path: "/Portefolio"
+}), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
   component: _Home.default,
   path: "/"
 })))), document.getElementById('app')); // ScrollbarCustom
@@ -37991,7 +38372,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 // Hide Scrollbards
 // https://www.geeksforgeeks.org/hide-scroll-bar-but-while-still-being-able-to-scroll-using-css/
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./index.css":"src/index.css","./Componants/Home.jsx":"src/Componants/Home.jsx","./Componants/NavBar.jsx":"src/Componants/NavBar.jsx","./Componants/About.jsx":"src/Componants/About.jsx","./Componants/CV.jsx":"src/Componants/CV.jsx","./Componants/Intro.jsx":"src/Componants/Intro.jsx"}],"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./index.css":"src/index.css","./Componants/Home.jsx":"src/Componants/Home.jsx","./Componants/NavBar.jsx":"src/Componants/NavBar.jsx","./Componants/About.jsx":"src/Componants/About.jsx","./Componants/CV.jsx":"src/Componants/CV.jsx","./Componants/Portefolio.jsx":"src/Componants/Portefolio.jsx","./Componants/Intro.jsx":"src/Componants/Intro.jsx"}],"../../../AppData/Roaming/npm-cache/_npx/18512/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
