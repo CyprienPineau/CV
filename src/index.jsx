@@ -17,7 +17,7 @@ render(
     <BrowserRouter>
         <div className="mainpage">
         
-            {/* <Intro/>  */}
+            <Intro/> 
             <NavBar/>
             <Switch onChange={()=>console.log("change")}>
                 <Route component={About} path="/about" />
