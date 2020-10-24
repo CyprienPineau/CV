@@ -20,8 +20,8 @@ const DATA_EXPERIENCES = [
 {
     id : '2',
     work: "DÉVELOPPEUR R&D",
-    entreprise : imgAusy,
-    imgRef : "./../../public/Ausy.png",
+    entreprise : "Ausy",
+    imgRef : imgAusy,
     location : "Sèvres",
     locationRef : "https://www.google.com/maps/place/Groupe+AUSY/@48.826711,2.2225863,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67a844cde1a93:0x630d1d27b4ff147e!8m2!3d48.826711!4d2.224775",
     date : "Septembre à Novembre 2018",
@@ -33,8 +33,8 @@ const DATA_EXPERIENCES = [
 {
     id : '3',
     work : "DÉVELOPPEUR INTEGRATEUR",
-    entreprise : imgSafran,
-    imgRef : "./../../public/Safran.png",
+    entreprise : "Safran",
+    imgRef : imgSafran,
     location : "Massy",
     locationRef : "https://www.google.com/maps/place/Safran+Electronics+%26+Defense/@48.7245298,2.2644159,17z/data=!4m8!1m2!2m1!1ssafran+electronics+%26+defense!3m4!1s0x0:0x98565794f8dd3bda!8m2!3d48.7245263!4d2.2666099",
     date : "Mars à Août 2018",
@@ -46,8 +46,8 @@ const DATA_EXPERIENCES = [
 {
     id : '4',
     work: "DÉVELOPPEUR",
-    entreprise : imgSafran,
-    imgRef : "./../../public/Safran.png",
+    entreprise : "Safran",
+    imgRef : imgSafran,
     location : "Massy",
     locationRef : "https://www.google.com/maps/place/Safran+Electronics+%26+Defense/@48.7245298,2.2644159,17z/data=!4m8!1m2!2m1!1ssafran+electronics+%26+defense!3m4!1s0x0:0x98565794f8dd3bda!8m2!3d48.7245263!4d2.2666099",
     date : "Mars 2017 à Fevrier 2018",
