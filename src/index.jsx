@@ -11,14 +11,13 @@ import CV from './Componants/CV.jsx';
 import Portefolio from './Componants/Portefolio.jsx';
 // import PortefolioZoom from './Componants/PortefolioZoom.jsx';
 
-// TODO enlever
 import Intro from './Componants/Intro.jsx';
 
 render(
     <BrowserRouter>
         <div className="mainpage">
         
-            <Intro/> 
+            {/* <Intro/>  */}
             <NavBar/>
             <Switch onChange={()=>console.log("change")}>
                 <Route component={About} path="/about" />

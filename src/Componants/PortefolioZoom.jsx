@@ -1,66 +1,67 @@
 import React, { Component } from 'react';
 
-import DATA_PORTEFOLIO from './../../data/data_porfolio'
-
 import './PortefolioZoom.css'
 
-function Section ({section, rawNumber}){
-    // optention de la direction d'affichage
+function Paragraph ({paragraph, rawNumber}){
+    // optention de la méthode d'affichage en fonction su numéro du rang
     let displayDirection = (rawNumber%2==0) ? "row" : "row-reverse"
     let displayAlignVideo = (rawNumber%2==0) ? "flex-end" : "flex-start"
     let displayAlignContent = (rawNumber%2==0) ? "flex-start" : "flex-end"
 
-    return <div className="section" style={{flexDirection:displayDirection}}>
-        <div className="section-video" style={{backgroundImage: `url(${section.img})`, alignItems:displayAlignVideo}}>
-            { section.video != "" && <div className="videowrapper">
-                    <iframe className="section-video-frame" src={section.video} width="100%" height="100%" scrolling="no" frameBorder="1" allowFullScreen/>
+    return <div className="paragraph" style={{flexDirection:displayDirection}}>
+        <div className="paragraph-illustration" style={{backgroundImage: `url(${paragraph.background})`, alignItems:displayAlignVideo}}>
+            
+            { paragraph.video != "" 
+                && <div className="paragraph-video">
+                    <div className="paragraph-illustration-videowrapper">
+                        <iframe className="paragraph-video-frame" src={paragraph.video} width="100%" height="100%" scrolling="no" frameBorder="1" allowFullScreen/>
+                    </div>
+                </div>
+            }
+            { paragraph.imgs !=null
+                &&<div className="paragraph-img">
+                    {paragraph.imgs.map((img,key)=>{
+                        return <img key={key} className="paragraph-illustration-image" src={img} alt={"image "+ paragraph.title }/>
+                    })}
                 </div>
             }
         </div>
 
-        <div className="section-content" style={{alignItems:displayAlignContent}}>
-            <h3 className="section-content-title">{section.title}</h3>
-            <p className="section-content-texte">{section.content}</p>
+        <div className="paragraph-content" style={{alignItems:displayAlignContent}}>
+            <h3 className="paragraph-content-title">{paragraph.title}</h3>
+            <p className="paragraph-content-texte">{paragraph.content}</p>
         </div>
     </div>
 }
 
-
 class PortefolioZoom extends Component {
 
-    render() { 
-        // this.props.selectedSectionName;
-        let selectedSection;
+    constructor(props){
+        super(props)
+    }
 
+    render() { 
         //on traque le numéro du rang pour savoir le sens de display
         let rawNumber=0;
 
-        DATA_PORTEFOLIO.map((section,key)=>{
-            if(section.name == "Spirit of Adventure"){
-                selectedSection = section;
-            }
-        });
-
-        let paragraph = selectedSection.paragraph.map((section,key)=>{
+        let paragraphs = this.props.section.paragraphs.map((paragraph,key)=>{
             rawNumber=rawNumber+1;
-            return <Section key={key} section={section} rawNumber={rawNumber} />
+            return <Paragraph key={key} paragraph={paragraph} rawNumber={rawNumber} />
         })
 
-        return <div className="portefoliozoom" style={{backgroundColor: selectedSection.primarycolor}}>
-            <a href="" className="portefoliozoom-btnClose" style={{backgroundColor: selectedSection.hightlightColor}}>
-            </a>
-            
-            <div className="portefoliozoom-background" style={{backgroundImage: `url(${selectedSection.background})`}}>
-                <div className="portefoliozoom-background-filter" style={{backgroundColor: selectedSection.backgroundColor}}>
-                    <img className="portefolio-section-logo" src={selectedSection.logo} alt="Logo de ..."/>
-                </div>
-            </div>
-            
-            <div className="portefoliozoom-content" style={{backgroundColor: selectedSection.secondaryColor}}>
-                <p className="portefoliozoom-content-texte">{selectedSection.noteIntroduction}</p>                
+        return <div className="portefoliozoom" style={{backgroundColor: this.props.section.primarycolor}}>
+            <div className="portefoliozoom-intro" style={{backgroundColor: this.props.section.secondaryColor}}>
+                <p className="portefoliozoom-intro-texte">{this.props.section.noteIntroduction}</p>                
             </div>
 
-            {paragraph}
+            {paragraphs}
+
+            {/* TODO ajouter les lien utiles */}
+            <div className="portefoliozoom-footer">
+                {/* <p>Liens utiles</p> */}
+                <a href=""></a>
+                <a href=""></a>
+            </div>
 
         </div>;
     }

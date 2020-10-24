@@ -29,18 +29,6 @@ class CV extends Component {
         this.setState({isSideMenuShown : false})
     }
 
-    componentDidMount() {
-        window.addEventListener('scroll', ()=>{
-            console.log("scroll")
-        });
-        console.log("addeventlistener")
-    }
-    
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-        console.log("removeEventListener")
-    }
-
     render() { 
 
         return <div className="cv">

@@ -3,23 +3,38 @@
 .portefolio{
     width: 100%;
     height: 100%;
+    flex: 1;
     justify-content: flex-start;
-    /* align-items: center; */
     background-color: var(--DarkPrimary);
     display: flex;
     flex-direction: row;
     position: relative;
+    overflow: hidden;
 }
-
 .porfolio-slide{
     min-width: 100%;
     height: 100%;
     transition: 0.5s;
-    overflow: hidden;
 }
-
+.porfolio-slide-btnClose{
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    position: absolute;
+    right:60px;
+    z-index: 1;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;    
+    padding: 22px;
+    transition : 0.5s;
+}
+.porfolio-slide-btnClose svg{
+    transform: rotate(45deg);
+}
 .portefolio-buttonLeft{
     left: 0px;
+    bottom: 0px;
     position: absolute;
     display: block;
     width: 10%;
@@ -36,6 +51,7 @@
 
 .portefolio-buttonRight{
     right: 0px;
+    bottom: 0px;
     position: absolute;
     display: block;
     width: 10%;
@@ -54,12 +70,14 @@
     background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
     width: 15%;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .portefolio-buttonLeft:hover{
     background: linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%);
     width: 15%;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .portefolio-buttonRight svg path, .portefolio-buttonLeft svg path{
@@ -69,6 +87,10 @@
 .portefolio-buttonRight:hover svg path,.portefolio-buttonLeft:hover svg path{
     fill:rgba(255, 255, 255, 0.50);
     transition: 0.5s;
+}
+.portefolio-buttonRight:active svg path,.portefolio-buttonLeft:active svg path{
+    fill:rgb(255, 255, 255);
+    transition: 0.1s;
 }
 
 .portefolio-pageindicator{
@@ -95,34 +117,38 @@
     transform: rotate(45deg);
 }
 
-.portefolio-section{
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+@media (max-width: 700px) {
+    .portefolio-buttonLeft{
+        height: 150px;
+        width: 150px;
+        bottom: 0px;
+        background: rgb(0,0,0);
+        background: linear-gradient(45deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 35%);
+    }
+    .portefolio-buttonRight{
+        height: 150px;
+        width: 150px;
+        bottom: 0px;
+        background: rgb(0,0,0);
+        background: linear-gradient(-45deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 35%);
+    }
+    .portefolio-buttonLeft:hover{
+        background: rgb(0,0,0);
+        background: linear-gradient(45deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 45%);
+        width: 150px;
+    }  
+    .portefolio-buttonRight:hover{
+        background: rgb(0,0,0);
+        background: linear-gradient(-45deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 45%);
+        width: 150px;
+    }
+    .portefolio-pageindicator{
+        bottom: 75px;
+        width: 100px;
+        transform: translateX(-50%) translateY(50%);
+    }
 }
 
-.portefolio-section-filter{
-    width: 100%;
-    height: 100%;
-    background-color: var(--SoaThemeDarkTr);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.portefolio-section-logo{
-    width: 500px;
-    
-}
-
-.portefolio-section-button{
-    padding: 10px 25px;
-    border-radius: 5px;
-    border-width: 0px;
-    font-size: 20px;
-    color: #ffffff;
-}
+/* background: rgb(0,0,0);
+background: linear-gradient(37deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); */

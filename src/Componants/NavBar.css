@@ -1,8 +1,5 @@
 @import './../TemplateStyleSeting.css';
 
-.blue{
- background-color: blue;
-}
 .navbar{
     background-color: none;
     background-color:var(--DarkTertiary);

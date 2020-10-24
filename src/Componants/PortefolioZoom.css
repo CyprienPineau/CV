@@ -4,55 +4,42 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: auto;
 }
-.portefoliozoom-btnClose{
-    width: 100px;
-    height: 100px;
-    transform: rotate(45deg);
-    position: absolute;
-    top:-50px;
-    right:60px;
-}
-.portefoliozoom-background{
-    width: 100%;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.portefoliozoom-background-filter{
-    width: 100%;
-    height: 100%;
-    background-color: var(--SoaThemeDarkTr);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.portefoliozoom-background-logo{
-}
-.portefoliozoom-content{
+.portefoliozoom-intro{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 40%;
+    padding: 40px 40px;
 }
-.portefoliozoom-content-texte{
+.portefoliozoom-intro-texte{
+    flex:1;
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 18px;
     color: #fff;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    max-width: 1280px;
+    white-space: pre-line;
+}
+.portefoliozoom-footer{
+    flex:1;
+    height: 100%;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.80);
+    padding: 40px;
 }
 
+
 /* SECTION */
-.section{
+.paragraph{
     display: flex;
     flex-direction: row;
-    /* justify-content: center;
-    align-items: center; */
 }
-.section-img{
+.paragraph-img{
     flex: 1;
 }
-.section-video{
+.paragraph-illustration{
     flex: 1;
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.233);
@@ -65,12 +52,27 @@
     display: flex;
     flex-direction: column;
 }
-.videowrapper{
+.paragraph-illustration-image{
+    max-width: 600px;
+    height: auto;
+    width: 100%;
+}
+.paragraph-video{
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+}
+.paragraph-img{
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+}
+.paragraph-illustration-videowrapper{
     width: 100%;
     position: relative;
     padding-bottom: 56.25%;/* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
 }
-.section-video-frame{
+.paragraph-video-frame{
     position: absolute;
     top: 0;
     left: 0;
@@ -80,16 +82,16 @@
     background-color: black;
     border:  10px solid black;
     border-radius: 5px;
-}   
-.section-content{
+}  
+.paragraph-content{
     flex: 1;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.section-content-title{
-    color: #fff;
+.paragraph-content-title{
+    color: rgba(255, 255, 255, 0.8);
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 15px;
@@ -98,10 +100,32 @@
     width: 100%;
     max-width: 600px;
 }
-.section-content-texte{
-    color: #fff;
+.paragraph-content-texte{
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: lighter;
+    font-size: 18px;
     max-width: 600px;
     text-align: justify;
-    font-size: 16px;
     white-space: pre-line;
+}
+
+@media (max-width: 1200px){
+    .paragraph{
+        display: block;
+    }
+    .paragraph-illustration{
+        display: block;
+    }
+    .paragraph-content{
+        display: block;
+    }
+    .paragraph-illustration *{
+        margin:0 auto;
+    }
+    .paragraph-content *{
+        margin:0 auto;
+    }
+    .portefoliozoom-intro-texte{
+        max-width: 600px;
+    }
 }

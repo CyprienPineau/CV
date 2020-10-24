@@ -20,6 +20,9 @@ body {
     width : 100%;
     background-color:var(--DarkPrimary);    
     background-image: url("./../public/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display : flex;  
     flex-direction: column;
 }
