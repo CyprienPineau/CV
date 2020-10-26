@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './Home.css'
 import imageCyprienP from "./../../public/CyprienP.jpg"
+import logoLinkedIn from './../../public/linkedin.svg'
 
 class Home extends Component {
     constructor(props){
@@ -12,10 +13,19 @@ class Home extends Component {
     }
 
     render() { 
+        console.log(logoLinkedIn)
         return <div className="home">
+
             <div className="home-textbox">
                 <h1 className="home-textbox-title">Cyprien PINEAU</h1>
                 <p className="home-textbox-introduction">« Je cherche à mettre ma créativité et force de proposition au profit de projets innovants en apportant une vision sortant des sentiers battus. »</p>
+                <a 
+                className="home-linkedin" 
+                href="https://www.linkedin.com/in/cyprien-pineau-b04726115"
+                target="_blank"
+                >
+                    <img className="home-linkedin-logo" src={logoLinkedIn} alt="Logo Linkedin"/>
+                </a>
             </div>
             <img 
                 className="home-pofileimg"

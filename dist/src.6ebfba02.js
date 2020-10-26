@@ -32400,13 +32400,82 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./..\\public\\background.jpg":[["background.3764310c.jpg","public/background.jpg"],"public/background.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/Home.css":[function(require,module,exports) {
+},{"./TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./..\\public\\background.jpg":[["background.3764310c.jpg","public/background.jpg"],"public/background.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js"}],"src/Componants/Home.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/13908/node_modules/parcel/src/builtins/css-loader.js"}],"public/CyprienP.jpg":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/css-loader.js"}],"public/CyprienP.jpg":[function(require,module,exports) {
 module.exports = "/CyprienP.0ea7edbf.jpg";
+},{}],"public/linkedin.svg":[function(require,module,exports) {
+module.exports = "/linkedin.6a233564.svg";
 },{}],"src/Componants/Home.jsx":[function(require,module,exports) {
 "use strict";
 
@@ -32420,6 +32489,8 @@ var _react = _interopRequireWildcard(require("react"));
 require("./Home.css");
 
 var _CyprienP = _interopRequireDefault(require("./../../public/CyprienP.jpg"));
+
+var _linkedin = _interopRequireDefault(require("./../../public/linkedin.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32470,6 +32541,7 @@ var Home = /*#__PURE__*/function (_Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
+      console.log(_linkedin.default);
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "home"
       }, /*#__PURE__*/_react.default.createElement("div", {
@@ -32478,7 +32550,15 @@ var Home = /*#__PURE__*/function (_Component) {
         className: "home-textbox-title"
       }, "Cyprien PINEAU"), /*#__PURE__*/_react.default.createElement("p", {
         className: "home-textbox-introduction"
-      }, "\xAB Je cherche \xE0 mettre ma cr\xE9ativit\xE9 et force de proposition au profit de projets innovants en apportant une vision sortant des sentiers battus. \xBB")), /*#__PURE__*/_react.default.createElement("img", {
+      }, "\xAB Je cherche \xE0 mettre ma cr\xE9ativit\xE9 et force de proposition au profit de projets innovants en apportant une vision sortant des sentiers battus. \xBB"), /*#__PURE__*/_react.default.createElement("a", {
+        className: "home-linkedin",
+        href: "https://www.linkedin.com/in/cyprien-pineau-b04726115",
+        target: "_blank"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        className: "home-linkedin-logo",
+        src: _linkedin.default,
+        alt: "Logo Linkedin"
+      }))), /*#__PURE__*/_react.default.createElement("img", {
         className: "home-pofileimg",
         src: _CyprienP.default,
         alt: "Photo de Cyprien"
@@ -32492,7 +32572,7 @@ var Home = /*#__PURE__*/function (_Component) {
 var _default = Home; // Image par <a href="https://pixabay.com/fr/users/Yuri_B-2216431/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Yuri_B</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Pixabay</a>
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Home.css":"src/Componants/Home.css","./../../public/CyprienP.jpg":"public/CyprienP.jpg"}],"src/Componants/NavBar.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Home.css":"src/Componants/Home.css","./../../public/CyprienP.jpg":"public/CyprienP.jpg","./../../public/linkedin.svg":"public/linkedin.svg"}],"src/Componants/NavBar.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -33239,74 +33319,7 @@ var SkillsList = /*#__PURE__*/function (_Component2) {
 
 var _default = SkillsList;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./../../data/data_skills":"data/data_skills.js","./SkillsList.css":"src/Componants/SkillsList.css","./ButtonSkills":"src/Componants/ButtonSkills.jsx"}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js"}],"src/Componants/FormationList.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./../../data/data_skills":"data/data_skills.js","./SkillsList.css":"src/Componants/SkillsList.css","./ButtonSkills":"src/Componants/ButtonSkills.jsx"}],"src/Componants/FormationList.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
