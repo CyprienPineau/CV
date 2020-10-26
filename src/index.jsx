@@ -4,30 +4,10 @@ import {BrowserRouter,Switch, Route, Link} from "react-router-dom";
 
 import './index.css';
 
-import Home from './Componants/Home.jsx';
-import NavBar from './Componants/NavBar.jsx';
-import About from './Componants/About.jsx';
-import CV from './Componants/CV.jsx';
-import Portefolio from './Componants/Portefolio.jsx';
-// import PortefolioZoom from './Componants/PortefolioZoom.jsx';
-
-import Intro from './Componants/Intro.jsx';
+import App from './App.jsx';
 
 render(
-    <BrowserRouter>
-        <div className="mainpage">
-        
-            <Intro/> 
-            <NavBar/>
-            <Switch onChange={()=>console.log("change")}>
-                <Route component={About} path="/about" />
-                <Route component={CV} path="/CV" />
-                <Route component={Portefolio} path="/Portefolio" />
-                {/* <Route component={PortefolioZoom} path="/Portefolio" /> */}
-                <Route component={Home} path="/" />
-            </Switch>
-        </div>
-    </BrowserRouter>, document.getElementById('app')    
+    <App/>, document.getElementById('app')    
 )
 
 // ScrollbarCustom

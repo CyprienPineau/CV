@@ -32328,79 +32328,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/13908/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/bundle-url.js"}],"src/index.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./..\\public\\background.jpg":[["background.3764310c.jpg","public/background.jpg"],"public/background.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/13908/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -32467,7 +32395,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js"}],"src/Componants/Home.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/bundle-url.js"}],"src/index.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./..\\public\\background.jpg":[["background.3764310c.jpg","public/background.jpg"],"public/background.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/Home.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -32539,9 +32472,13 @@ var Home = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.setActivePage("Home");
+    }
+  }, {
     key: "render",
     value: function render() {
-      console.log(_linkedin.default);
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "home"
       }, /*#__PURE__*/_react.default.createElement("div", {
@@ -32572,7 +32509,74 @@ var Home = /*#__PURE__*/function (_Component) {
 var _default = Home; // Image par <a href="https://pixabay.com/fr/users/Yuri_B-2216431/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Yuri_B</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1487545">Pixabay</a>
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Home.css":"src/Componants/Home.css","./../../public/CyprienP.jpg":"public/CyprienP.jpg","./../../public/linkedin.svg":"public/linkedin.svg"}],"src/Componants/NavBar.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Home.css":"src/Componants/Home.css","./../../public/CyprienP.jpg":"public/CyprienP.jpg","./../../public/linkedin.svg":"public/linkedin.svg"}],"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/bundle-url.js"}],"src/Componants/NavBar.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -32622,73 +32626,32 @@ var NavBar = /*#__PURE__*/function (_Component) {
 
   var _super = _createSuper(NavBar);
 
-  function NavBar(props) {
-    var _this;
-
+  function NavBar() {
     _classCallCheck(this, NavBar);
 
-    _this = _super.call(this, props);
-    _this.state = {
-      isHomeSlected: true,
-      isCvSlected: false,
-      isPorfolioSlected: false
-    };
-    _this.handleClickHome = _this.handleClickHome.bind(_assertThisInitialized(_this));
-    _this.handleClickCv = _this.handleClickCv.bind(_assertThisInitialized(_this));
-    _this.handleClickPorfolio = _this.handleClickPorfolio.bind(_assertThisInitialized(_this));
-    return _this;
+    return _super.apply(this, arguments);
   }
 
   _createClass(NavBar, [{
-    key: "handleClickHome",
-    value: function handleClickHome() {
-      this.setState({
-        isHomeSlected: true,
-        isCvSlected: false,
-        isPorfolioSlected: false
-      });
-    }
-  }, {
-    key: "handleClickCv",
-    value: function handleClickCv() {
-      this.setState({
-        isHomeSlected: false,
-        isCvSlected: true,
-        isPorfolioSlected: false
-      });
-    }
-  }, {
-    key: "handleClickPorfolio",
-    value: function handleClickPorfolio() {
-      this.setState({
-        isHomeSlected: false,
-        isCvSlected: false,
-        isPorfolioSlected: true
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "navbar"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         className: "navbar-button",
-        to: "/",
-        onClick: this.handleClickHome
+        to: "/"
       }, /*#__PURE__*/_react.default.createElement("p", null, "Accueil"), /*#__PURE__*/_react.default.createElement("div", {
-        className: this.state.isHomeSlected ? "navbar-button-cursor" : "navbar-button-nocursor"
+        className: this.props.activePage == 'Home' ? "navbar-button-cursor" : "navbar-button-nocursor"
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         className: "navbar-button",
-        to: "/CV",
-        onClick: this.handleClickCv
+        to: "/CV"
       }, /*#__PURE__*/_react.default.createElement("p", null, "CV"), /*#__PURE__*/_react.default.createElement("div", {
-        className: this.state.isCvSlected ? "navbar-button-cursor" : "navbar-button-nocursor"
+        className: this.props.activePage == 'CV' ? "navbar-button-cursor" : "navbar-button-nocursor"
       })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         className: "navbar-button",
-        to: "/Portefolio",
-        onClick: this.handleClickPorfolio
+        to: "/Portefolio"
       }, /*#__PURE__*/_react.default.createElement("p", null, "Portefolio"), /*#__PURE__*/_react.default.createElement("div", {
-        className: this.state.isPorfolioSlected ? "navbar-button-cursor" : "navbar-button-nocursor"
+        className: this.props.activePage == 'Portefolio' ? "navbar-button-cursor" : "navbar-button-nocursor"
       })));
     }
   }]);
@@ -32768,7 +32731,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./..\\..\\public\\background.jpg":[["background.3764310c.jpg","public/background.jpg"],"public/background.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/8048/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/Content.css":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","./..\\..\\public\\background.jpg":[["background.3764310c.jpg","public/background.jpg"],"public/background.jpg"],"_css_loader":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/Content.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -32778,7 +32741,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/13908/node_modules/parcel/src/builtins/css-loader.js"}],"public/CV/OpenEra.png":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/css-loader.js"}],"public/CV/OpenEra.png":[function(require,module,exports) {
 module.exports = "/OpenEra.ae305bba.png";
 },{}],"public/CV/Safran.png":[function(require,module,exports) {
 module.exports = "/Safran.ccf536dc.png";
@@ -37512,7 +37475,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/13908/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/SideMenu.jsx":[function(require,module,exports) {
+},{"./../TemplateStyleSeting.css":"src/TemplateStyleSeting.css","_css_loader":"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/css-loader.js"}],"src/Componants/SideMenu.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37775,10 +37738,15 @@ var CV = /*#__PURE__*/function (_Component) {
     _this.handleShowSideMenu = _this.handleShowSideMenu.bind(_assertThisInitialized(_this));
     _this.handleHideSideMenu = _this.handleHideSideMenu.bind(_assertThisInitialized(_this));
     return _this;
-  } // fonction permettant de faire apparaitre le volet
-
+  }
 
   _createClass(CV, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.setActivePage("CV");
+    } // fonction permettant de faire apparaitre le volet
+
+  }, {
     key: "handleShowSideMenu",
     value: function handleShowSideMenu(e) {
       // récupération des donnée data-user sur e.target.dataset.user pour avoir le sujet sélectonné
@@ -37800,18 +37768,18 @@ var CV = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "cv"
-      }, /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement(_SideMenu.default, {
+        isShawn: this.state.isSideMenuShown,
+        subject: this.state.SideMenuSubject,
+        show: this.handleHideSideMenu
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: "cv-maincontent"
       }, /*#__PURE__*/_react.default.createElement(_reactScrollbarsCustom.default, {
         className: "cv-maincontent-scrollbox"
       }, /*#__PURE__*/_react.default.createElement(_Content.default, {
         showSideMenu: this.handleShowSideMenu,
         isSideMenuShown: this.state.isSideMenuShown
-      }))), /*#__PURE__*/_react.default.createElement(_SideMenu.default, {
-        isShawn: this.state.isSideMenuShown,
-        subject: this.state.SideMenuSubject,
-        show: this.handleHideSideMenu
-      }));
+      }))));
     }
   }]);
 
@@ -44414,10 +44382,15 @@ var Portefolio = /*#__PURE__*/function (_Component) {
     _this.handleConsult = _this.handleConsult.bind(_assertThisInitialized(_this));
     _this.handleCloseConsult = _this.handleCloseConsult.bind(_assertThisInitialized(_this));
     return _this;
-  } // Ajustement du mode consultation
-
+  }
 
   _createClass(Portefolio, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.setActivePage("Portefolio");
+    } // Ajustement du mode consultation
+
+  }, {
     key: "handleConsult",
     value: function handleConsult() {
       this.setState({
@@ -44627,12 +44600,15 @@ function Intro(_ref) {
 
 var _default = Intro;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Intro.css":"src/Componants/Intro.css"}],"src/index.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Intro.css":"src/Componants/Intro.css"}],"src/App.jsx":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireWildcard(require("react"));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
-var _reactDom = _interopRequireWildcard(require("react-dom"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
@@ -44656,32 +44632,111 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-// import PortefolioZoom from './Componants/PortefolioZoom.jsx';
-(0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement("div", {
-  className: "mainpage"
-}, /*#__PURE__*/_react.default.createElement(_Intro.default, null), /*#__PURE__*/_react.default.createElement(_NavBar.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, {
-  onChange: function onChange() {
-    return console.log("change");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var App = /*#__PURE__*/function (_Component) {
+  _inherits(App, _Component);
+
+  var _super = _createSuper(App);
+
+  function App(props) {
+    var _this;
+
+    _classCallCheck(this, App);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      activePage: "Home"
+    };
+    _this.setActivePage = _this.setActivePage.bind(_assertThisInitialized(_this));
+    return _this;
   }
-}, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-  component: _About.default,
-  path: "/about"
-}), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-  component: _CV.default,
-  path: "/CV"
-}), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-  component: _Portefolio.default,
-  path: "/Portefolio"
-}), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-  component: _Home.default,
-  path: "/"
-})))), document.getElementById('app')); // ScrollbarCustom
+
+  _createClass(App, [{
+    key: "setActivePage",
+    value: function setActivePage(pageName) {
+      this.setState({
+        activePage: pageName
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "app"
+      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_Intro.default, null), /*#__PURE__*/_react.default.createElement(_NavBar.default, {
+        activePage: this.state.activePage
+      }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, {
+        onChange: function onChange() {
+          return console.log("change");
+        }
+      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/CV"
+      }, /*#__PURE__*/_react.default.createElement(_CV.default, {
+        setActivePage: this.setActivePage
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/Portefolio"
+      }, /*#__PURE__*/_react.default.createElement(_Portefolio.default, {
+        setActivePage: this.setActivePage
+      })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+        path: "/"
+      }, /*#__PURE__*/_react.default.createElement(_Home.default, {
+        setActivePage: this.setActivePage
+      })))));
+    }
+  }]);
+
+  return App;
+}(_react.Component);
+
+var _default = App;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./index.css":"src/index.css","./Componants/Home.jsx":"src/Componants/Home.jsx","./Componants/NavBar.jsx":"src/Componants/NavBar.jsx","./Componants/About.jsx":"src/Componants/About.jsx","./Componants/CV.jsx":"src/Componants/CV.jsx","./Componants/Portefolio.jsx":"src/Componants/Portefolio.jsx","./Componants/Intro.jsx":"src/Componants/Intro.jsx"}],"src/index.jsx":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactDom = _interopRequireWildcard(require("react-dom"));
+
+var _reactRouterDom = require("react-router-dom");
+
+require("./index.css");
+
+var _App = _interopRequireDefault(require("./App.jsx"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+(0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById('app')); // ScrollbarCustom
 // https://github.com/xobotyi/react-scrollbars-custom
 // Implement smoof scrolling
 //https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 // Hide Scrollbards
 // https://www.geeksforgeeks.org/hide-scroll-bar-but-while-still-being-able-to-scroll-using-css/
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./index.css":"src/index.css","./Componants/Home.jsx":"src/Componants/Home.jsx","./Componants/NavBar.jsx":"src/Componants/NavBar.jsx","./Componants/About.jsx":"src/Componants/About.jsx","./Componants/CV.jsx":"src/Componants/CV.jsx","./Componants/Portefolio.jsx":"src/Componants/Portefolio.jsx","./Componants/Intro.jsx":"src/Componants/Intro.jsx"}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./index.css":"src/index.css","./App.jsx":"src/App.jsx"}],"../../../AppData/Roaming/npm-cache/_npx/20716/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
