@@ -12,10 +12,13 @@ class Home extends Component {
         }
     }
 
-    render() { 
-        console.log(logoLinkedIn)
-        return <div className="home">
+    componentDidMount(){
+        this.props.setActivePage("Home")
+    }
 
+
+    render() { 
+        return <div className="home">
             <div className="home-textbox">
                 <h1 className="home-textbox-title">Cyprien PINEAU</h1>
                 <p className="home-textbox-introduction">« Je cherche à mettre ma créativité et force de proposition au profit de projets innovants en apportant une vision sortant des sentiers battus. »</p>

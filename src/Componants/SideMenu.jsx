@@ -26,7 +26,6 @@ class SideMenu extends Component {
     constructor(props){
         super(props)
         this.state = {
-            
             windowInnerWidth : window.innerWidth
         }
         

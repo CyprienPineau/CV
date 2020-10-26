@@ -20,6 +20,10 @@ class Portefolio extends Component {
         this.handleCloseConsult = this.handleCloseConsult.bind(this)
     }
 
+    componentDidMount(){
+        this.props.setActivePage("Portefolio")
+    }
+
     // Ajustement du mode consultation
     handleConsult(){this.setState({isConsulting : true})}
     handleCloseConsult(){this.setState({isConsulting : false})}
@@ -82,21 +86,6 @@ class Portefolio extends Component {
             </a>}
 
             {portefolioSections}
-
-            {/* <div style={{backgroundColor:'yellow',border:'1px solid blue',minWidth:'100%',width:'100%'}}></div> */}
-            {/* <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',width:'100px'}}></div>
-            <div style={{backgroundColor:'green',border:'1px solid blue',width:'100px'}}></div> */}
 
             {!this.state.isConsulting && <a onClick={this.handleGoLeft} className="portefolio-buttonLeft">
                 {/* Arrow left */}

@@ -18,6 +18,10 @@ class CV extends Component {
         this.handleHideSideMenu = this.handleHideSideMenu.bind(this)
     }
     
+    componentDidMount(){
+        this.props.setActivePage("CV")
+    }
+
     // fonction permettant de faire apparaitre le volet
     handleShowSideMenu(e){
         // récupération des donnée data-user sur e.target.dataset.user pour avoir le sujet sélectonné
@@ -32,26 +36,23 @@ class CV extends Component {
     render() { 
 
         return <div className="cv">
-            <div className="cv-maincontent">
+            <SideMenu 
+                isShawn={this.state.isSideMenuShown}
+                subject={this.state.SideMenuSubject}
+                show={this.handleHideSideMenu}                
+            />
+            <div className="cv-maincontent">           
+            {/* <div style={{backgroundColor:'red',border:'1px solid blue',flex:1}}>eze</div>
+            <div style={{backgroundColor:'red',border:'1px solid blue',flex:1}}>zerzer</div> */}
+
                 <RSC className="cv-maincontent-scrollbox">
                     <Content
                         showSideMenu={this.handleShowSideMenu}
                         isSideMenuShown = {this.state.isSideMenuShown}
                     />
                 </RSC>
-                {/* TODO a faire apparaitre au bon moment */}
-                {/* <a href="" className="cv-maincontent-returnTop">
-                    <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="13.7071" y1="0.707108" x2="27.8492" y2="14.8492" stroke="white" strokeWidth="2"/>
-                        <line x1="14.8493" y1="0.707107" x2="0.707121" y2="14.8492" stroke="white" strokeWidth="2"/>
-                    </svg>
-                </a> */}
             </div>
-            <SideMenu 
-                isShawn={this.state.isSideMenuShown}
-                subject={this.state.SideMenuSubject}
-                show={this.handleHideSideMenu}                
-            />
+
         </div>;
     }
 }
