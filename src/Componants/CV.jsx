@@ -4,7 +4,7 @@ import './CV.css'
 
 import Content from './Content.jsx'
 import SideMenu from './SideMenu.jsx'
-import RSC from "react-scrollbars-custom"
+import {Scrollbar}  from "react-scrollbars-custom"
 
 class CV extends Component {
     
@@ -35,22 +35,21 @@ class CV extends Component {
 
     render() { 
 
-        return <div className="cv">
+        return <div className="cv" style={{overflow:'hidden'}}>
             <SideMenu 
                 isShawn={this.state.isSideMenuShown}
                 subject={this.state.SideMenuSubject}
                 show={this.handleHideSideMenu}                
             />
-            <div className="cv-maincontent">           
-            {/* <div style={{backgroundColor:'red',border:'1px solid blue',flex:1}}>eze</div>
-            <div style={{backgroundColor:'red',border:'1px solid blue',flex:1}}>zerzer</div> */}
-
-                <RSC className="cv-maincontent-scrollbox">
+            <div className="cv-maincontent" style={{overflow:'auto', position:'relative'}}>
+            {/* TODO gérer correctement des scrollbars et les personnaliser */}
+            {/* className="cv-maincontent-scrollbox"           */}
+                {/* <Scrollbar style={{height:'100%', width:'100%', padding: '0px'}}> */}
                     <Content
                         showSideMenu={this.handleShowSideMenu}
                         isSideMenuShown = {this.state.isSideMenuShown}
                     />
-                </RSC>
+                {/* </Scrollbar> */}
             </div>
 
         </div>;
