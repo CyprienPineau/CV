@@ -28,4 +28,6 @@ Stockés dans ces differents fichiers, les données concernants expériences / f
 - Séparation des fichiers correspondant à l'accueil, au CV et au Portefolio
 - Intégration de liens en bas de page de portefolio
 - Ajout d'une section "About"
+- Régler problème de reférencement (Passage sur Next Js ?)
+- Icône de page à ajouter
 
