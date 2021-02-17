@@ -1,18 +1,23 @@
 # Introduction
+
 Ce format a pour but d'être dynamique et facilement adaptable à n'importe qui pour générer un CV/Portefolio Web complet à partir de fichier de données.
+
 Une fois totalement fini se, le format permettra qu'à partir d'une simple modification de fichiers de data, de mettre à jour la totalité du site web.
 
 # Stack Technique :
-ReactJs
-Parcel
-Déploiment Netlify
+
+ReactJs, Parcel, Déploiment Netlify
 
 # Styles Généraux : 
+
 File : ./src/TemplateStyleSeting.css
+
 Il est possible de changer les couleurs du thèmes du CV
 
 # Données : 
+
 Files : ./data/data_experiences.js , ./data/data_formation.js , ./data/data_porfolio.js , ./data/data_skills.js
+
 Stockés dans ces differents fichiers, les données concernants expériences / formations / compétences / porfolio y sont stocké.
 
 -----------------
