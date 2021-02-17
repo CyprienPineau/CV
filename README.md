@@ -7,14 +7,12 @@ ReactJs
 Parcel
 Déploiment Netlify
 
-# Styles Généraux : (/src/TemplateStyleSeting.css)
+# Styles Généraux : 
+File : ./src/TemplateStyleSeting.css
 Il est possible de changer les couleurs du thèmes du CV
 
 # Données : 
-(/data/data_experiences.js)
-(/data/data_formation.js)
-(/data/data_porfolio.js)
-(/data/data_skills.js)
+Files : ./data/data_experiences.js , ./data/data_formation.js , ./data/data_porfolio.js , ./data/data_skills.js
 Stockés dans ces differents fichiers, les données concernants expériences / formations / compétences / porfolio y sont stocké.
 
 -----------------
