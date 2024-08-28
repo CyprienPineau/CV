@@ -1,0 +1,34 @@
+.portefoliozoom {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.portefoliozoom-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+}
+.portefoliozoom-intro-texte {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  color: #fff;
+  font-weight: lighter;
+  text-align: justify;
+  max-width: 600px;
+  white-space: pre-line;
+}
+.portefoliozoom-footer {
+  flex: 1;
+  height: 100%;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+}
+
+@media (max-width: 1200px) {
+  .portefoliozoom-intro-texte {
+    max-width: 600px;
+  }
+}

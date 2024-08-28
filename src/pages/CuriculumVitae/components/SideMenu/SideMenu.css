@@ -1,0 +1,70 @@
+.sidemenu {
+  z-index: 99;
+  width: 500px;
+  background-color: var(--MiddleSecondary);
+  transition: 0.5s;
+  margin-left: -500px;
+  position: relative;
+}
+.sidemenu.shown {
+  margin-left: 0px;
+}
+.sidemenu-scrollcontainer {
+  padding: 30px;
+}
+.sidemenu-title {
+  color: var(--MiddlePrimary);
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-weight: lighter;
+}
+.sidemenu-infosupp {
+  color: var(--MiddlePrimary);
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.sidemenu-buttonclose {
+  z-index: 50;
+  position: absolute;
+  top: 28px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  margin-right: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--MiddleSecondary);
+  transition: 0.1s ease-out;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.sidemenu-buttonclose:hover {
+  background-color: var(--MiddlePrimary);
+}
+.sidemenu-buttonclose:active {
+  background-color: var(--DarkSecondary);
+}
+.sidemenu-buttonclose.shown {
+  transition: 0.1s;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.sidemenu-buttonclose svg {
+  transform: rotate(45deg);
+}
+.sidemenu-buttonclose:hover svg {
+  height: 17px;
+  width: 17px;
+}
+
+@media (max-width: 1500px) {
+  .sidemenu {
+    width: 350px;
+    margin-left: -350px;
+  }
+}

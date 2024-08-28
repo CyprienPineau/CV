@@ -1,0 +1,37 @@
+.skill {
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.skill-button {
+  padding: 10px 15px 10px 15px;
+  background-color: var(--skill-background);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  border: 0px solid var(--MiddlePrimary);
+  border-radius: 5px;
+  color: var(--skill-text);
+  font-size: 16px;
+  font-weight: normal;
+  box-shadow: var(--StandardShadow);
+}
+.skill-button:hover {
+  background-color: var(--skill-background-hover);
+  color: var(--BrightPrimary);
+}
+.skill-button:active {
+  background-color: var(--DarkPrimary);
+  border-color: var(--DarkPrimary);
+  color: var(--MiddlePrimary);
+}
+
+.skill-duration {
+  background-color: var(--skill-supp-background);
+  padding: 5px 20px 5px 20px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: var(--StandardShadow);
+  color: var(--skill-supp-text);
+}
