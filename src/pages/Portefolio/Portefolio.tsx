@@ -3,10 +3,12 @@ import "./Portefolio.css";
 
 import { DATA_PORTEFOLIO } from "../../data/data_porfolio";
 import Project from "./components/Project";
+import { useSearchParams } from "react-router-dom";
 
 const Portefolio = () => {
   const [index, setIndex] = useState(0);
-  const [isConsulting, setIsConsulting] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isDetailDiplay = searchParams.get("display") === "details";
 
   // Navigation dans le carousel
   const handleGoRight = () => {
@@ -31,10 +33,10 @@ const Portefolio = () => {
       >
         <button
           key={"CloseButton" + project.name}
-          onClick={() => setIsConsulting(false)}
+          onClick={() => setSearchParams()}
           className="porfolio-slide-btnClose"
           style={{
-            top: !isConsulting ? "-200px" : "-50px",
+            top: !isDetailDiplay ? "-200px" : "-50px",
             backgroundColor: project.hightlightColor,
           }}
         >
@@ -64,16 +66,12 @@ const Portefolio = () => {
           </svg>
         </button>
 
-        <Project
-          project={project}
-          handleConsult={() => setIsConsulting(true)}
-          isConsulting={isConsulting}
-        />
+        <Project project={project} />
       </div>
     );
   });
 
-  const porfolioIndicators = DATA_PORTEFOLIO.map((section, key) => {
+  const porfolioIndicators = DATA_PORTEFOLIO.map((_, key) => {
     return (
       <div
         key={key}
@@ -89,7 +87,7 @@ const Portefolio = () => {
   // retour du portefolio complet
   return (
     <div className="portefolio">
-      {!isConsulting && (
+      {!isDetailDiplay && (
         <a onClick={handleGoRight} className="portefolio-buttonRight">
           {/* Arrow right */}
           <svg
@@ -117,7 +115,7 @@ const Portefolio = () => {
 
       {ProjectList}
 
-      {!isConsulting && (
+      {!isDetailDiplay && (
         <a onClick={handleGoLeft} className="portefolio-buttonLeft">
           {/* Arrow left */}
           <svg
@@ -143,7 +141,7 @@ const Portefolio = () => {
         </a>
       )}
 
-      {!isConsulting && (
+      {!isDetailDiplay && (
         <div className="portefolio-pageindicator">{porfolioIndicators}</div>
       )}
     </div>

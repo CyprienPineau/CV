@@ -1,16 +1,20 @@
 import "./Project.css";
 import ProjectContent from "../ProjectContent";
 import { ProjectProps } from "./Project.types";
+import { useSearchParams } from "react-router-dom";
 
-const Project = ({ project, isConsulting, handleConsult }: ProjectProps) => {
+const Project = ({ project }: ProjectProps) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isDetailDiplay = searchParams.get("display") === "details";
+
   return (
     <div className="portefoliosection">
       <div
         className="portefoliosection-background"
         style={{
           backgroundImage: `url(${project.background})`,
-          height: isConsulting ? "40%" : "100%",
-          transition: isConsulting ? "ease-in-out 0.5s" : "ease-in-out 0.2s",
+          height: isDetailDiplay ? "40%" : "100%",
+          transition: isDetailDiplay ? "ease-in-out 0.5s" : "ease-in-out 0.2s",
         }}
       >
         <div
@@ -19,7 +23,7 @@ const Project = ({ project, isConsulting, handleConsult }: ProjectProps) => {
         >
           <img
             className={
-              isConsulting
+              isDetailDiplay
                 ? "portefoliosection-logominimized"
                 : "portefoliosection-logo"
             }
@@ -29,10 +33,10 @@ const Project = ({ project, isConsulting, handleConsult }: ProjectProps) => {
           <h1 className="portefoliosection-title">{project.name}</h1>
           <div className="portefoliosection-subtitle">{project.subtitle}</div>
 
-          {!isConsulting && (
+          {!isDetailDiplay && (
             <button
               key={"ConsultButton" + project.name}
-              onClick={handleConsult}
+              onClick={() => setSearchParams({ display: "details" })}
               className="portefoliosection-button"
               style={{
                 backgroundColor: project.hightlightColor,
@@ -43,7 +47,7 @@ const Project = ({ project, isConsulting, handleConsult }: ProjectProps) => {
           )}
         </div>
       </div>
-      {isConsulting && <ProjectContent project={project} />}
+      {isDetailDiplay && <ProjectContent project={project} />}
     </div>
   );
 };
