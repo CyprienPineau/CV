@@ -1,34 +1,82 @@
-.portefoliozoom {
+.ProjectContent {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.portefoliozoom-intro {
+.ProjectContent-intro {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 40px 40px;
+  align-items: flex-start;
+  padding: 90px 40px;
+  gap: 50px;
 }
-.portefoliozoom-intro-texte {
+.ProjectContent-icon {
+  max-width: 30px;
+}
+.ProjectContent-icon path {
+  fill: currentColor;
+}
+.ProjectContent-intro-texte {
   flex: 1;
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
-  color: #fff;
   font-weight: lighter;
-  text-align: justify;
-  max-width: 600px;
+  text-align: center;
+  max-width: 1105px;
+
+  max-width: 700px;
   white-space: pre-line;
 }
-.portefoliozoom-footer {
+.ProjectContent-footer {
   flex: 1;
   height: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   color: rgba(255, 255, 255, 0.8);
-  padding: 40px;
+  padding: 90px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ProjectContent-links {
+  max-width: 1500px;
+  width: 100%;
+}
+.ProjectContent-links ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 120px;
+}
+.ProjectContent-links li {
+  list-style: none;
+}
+.ProjectContent-links a:link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.ProjectContent-links a:visited {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.ProjectContent-links a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 1200px) {
-  .portefoliozoom-intro-texte {
-    max-width: 600px;
+  .ProjectContent-intro {
+    gap: 15px;
+    padding: 90px 20px;
+  }
+  .ProjectContent-intro-texte {
+    max-width: 500px;
+  }
+  .ProjectContent-links {
+    max-width: 800px;
+  }
+  .ProjectContent-icon {
+    max-width: 25px;
   }
 }

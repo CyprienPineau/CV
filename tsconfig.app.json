@@ -26,7 +26,8 @@
     "paths": {
       "_pages/*": ["./src/pages/*"],
       "_data/*": ["./src/data/*"],
-      "_assets/*": ["./src/assets/*"]
+      "_assets/*": ["./src/assets/*"],
+      "_icons/*": ["./src/icons/*"]
     }
   },
   "include": ["src"]

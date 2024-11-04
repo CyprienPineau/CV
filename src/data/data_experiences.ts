@@ -9,7 +9,7 @@ export const DATA_EXPERIENCES: Experience[] = [
     imgRef: undefined,
     location: "Lyon",
     locationRef:
-      "https://www.google.com/maps/place/CISCO+LYON/@45.7791303,4.8599008,17z/data=!3m1!4b1!4m6!3m5!1s0x47f4c01c11c5f37b:0xdfb4b50588feb309!8m2!3d45.7791303!4d4.8599008!16s%2Fg%2F11cn96f_m9?entry=ttu&g_ep=EgoyMDI0MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+      "https://www.google.com/maps/place/OpenStudio+Lyon/@45.7589456,4.828387,17z/data=!3m2!4b1!5s0x47f4ea537bbc0faf:0xe695c12cb2f62278!4m6!3m5!1s0x47f4ebef884b839b:0xdf1d15b93eedbd66!8m2!3d45.7589419!4d4.8309619!16s%2Fg%2F11nxrqsgj8?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D",
     date: "Mars 2021 à Mars 2022",
     duration: "2 ans",
     missions: [
@@ -19,7 +19,7 @@ export const DATA_EXPERIENCES: Experience[] = [
           "Cette plateforme est à destination des chercheurs IA d'OpenStudio. Elle permet de montrer des données relatives à l'économie, aux produits, à l'énergie, aux secteurs d'activité… Ainsi que fournir un outil de visualisations à des simulations tel que la rupture d'approvisionnement, le changement d'approvisionnement énergétique, une rupture des échanges entre deux pays…\n\nPour que l'utilisateur puisse appréhender ces ensembles de données complexes, la clé a été de multiplier les points de vues.\nL'idée a été de permettre à l'utilisateur de filtrer et personnaliser les données mise en avant.\n\nJ'ai maquetté sur figma la plateforme, suite à un recueil des besoin auprès de l'équipe de recherche.\nJ'ai pu également mettre en place la totalisé de l'environnement front, ainsi qu'accompagner un alternant pour la réalisation de développement Front.",
       },
       {
-        title: "Animation d'equipe & développement dans le projet NextGen",
+        title: "Animation d'équipe & développement dans le projet NextGen",
         description:
           "J'ai été chargé de prendre des tâches de Scrum Master : organisation des réunions, suivis,  animation des rituels et amélioration continue.\n\nJe suis intervenu dans le développement de sites de primes à l'énergie comme primes-energie.primagaz.fr, prime-energie-reno.fr, prime-eco-travaux.carrefour.fr, et également plusieurs solutions de back office.",
       },
@@ -31,13 +31,11 @@ export const DATA_EXPERIENCES: Experience[] = [
       "SCSS",
       "PostCSS",
       "Strapi",
-      "Storybook",
-      "Vite",
       "Git",
       "Docker",
       "VsCode",
       "Agile",
-      "Documentation",
+      "SCRUM Master",
     ],
   },
   {

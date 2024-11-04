@@ -6,7 +6,7 @@ import Layout from "./components/Layout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/*",
     element: (
       <Layout isNavBar={false}>
         <Home />
@@ -23,6 +23,14 @@ const router = createBrowserRouter([
   },
   {
     path: "/Portefolio",
+    element: (
+      <Layout>
+        <Portefolio />
+      </Layout>
+    ),
+  },
+  {
+    path: "/Portefolio/:id",
     element: (
       <Layout>
         <Portefolio />

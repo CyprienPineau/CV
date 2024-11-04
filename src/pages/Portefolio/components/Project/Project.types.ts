@@ -1,8 +1,10 @@
 import { Paragraph } from "../Paragraph/Paragraph.types";
 
 export type Project = {
+  slug: string;
   name: string;
   subtitle: string;
+  date: string;
   logo: string;
   background?: string;
   backgroundColor: string;
@@ -12,7 +14,7 @@ export type Project = {
   hightlightColorHover: string;
   introduction: string;
   paragraphs: Paragraph[];
-  liens: [];
+  extraLink: { name: string; link: string }[];
 };
 
 export type ProjectProps = {

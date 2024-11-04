@@ -5,5 +5,5 @@ export type SkillProps = {
 export type Skill = {
   name: string;
   duration?: string;
-  note: string;
+  note?: string;
 };

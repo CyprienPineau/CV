@@ -31,7 +31,9 @@ const Project = ({ project }: ProjectProps) => {
             alt={"Logo de" + project.name}
           />
           <h1 className="portefoliosection-title">{project.name}</h1>
-          <div className="portefoliosection-subtitle">{project.subtitle}</div>
+          <div className="portefoliosection-subtitle">
+            {project.subtitle} - {project.date}
+          </div>
 
           {!isDetailDiplay && (
             <button

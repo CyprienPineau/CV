@@ -25,14 +25,14 @@
   padding: 100px;
 }
 .portefoliosection-logo {
-  max-width: 500px;
-  max-height: 300px;
+  max-width: 600px;
+  max-height: 250px;
   height: auto;
   width: auto;
   transition: 0.1s;
 }
 .portefoliosection-logominimized {
-  max-width: 350px;
+  max-width: 500px;
   max-height: 200px;
   height: auto;
   width: auto;
@@ -60,7 +60,7 @@
 .portefoliosection-subtitle {
   font-size: 20px;
   color: #e0e0e0;
-  max-width: 700px;
+  max-width: 600px;
   text-align: center;
   opacity: 0.9;
 }
@@ -77,15 +77,15 @@
 @media (max-width: 700px) {
   .portefoliosection-logo {
     max-width: 300px;
-    max-height: 220px;
+    max-height: 170px;
 
     height: auto;
     width: auto;
     transition: 0.1s;
   }
   .portefoliosection-logominimized {
-    max-width: 250px;
-    max-height: 160px;
+    max-width: 260px;
+    max-height: 140px;
     height: auto;
     width: auto;
     transition: 0.4s;
