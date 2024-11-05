@@ -14,6 +14,7 @@ const Formation = ({ formation, isSideMenuShown }: FormationProps) => {
             ? "formation-corps-img sidemenuopen"
             : "formation-corps-img"
         }
+        style={{ backgroundImage: `url(${formation.imgFond})` }}
       >
         {/* ajout d'une div pour gérer la transparence */}
         <div className="formation-corps-img-transparency">

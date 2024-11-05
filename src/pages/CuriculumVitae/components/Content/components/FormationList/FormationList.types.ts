@@ -10,6 +10,7 @@ export type FormationListProps = {
 export type Formation = {
   name: string;
   imgRef: string;
+  imgFond: string;
   location: string;
   locationRef: string;
   date: string;
