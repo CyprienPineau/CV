@@ -4,19 +4,20 @@ import { DATA_SKILLS } from "../../../../data/data_skills";
 import ExperienceCard from "./components/ExperienceCard";
 
 import "./SideMenu.css";
+import { IconClose } from "_icons/index";
 
 const SideMenu = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedSkill = searchParams.get("selectedSkill");
 
   // selection les experiences correspondant au sujet du volet
-  const experienceList = selectedSkill
-    ? DATA_EXPERIENCES.filter((experience) =>
-        experience.skills.includes(selectedSkill)
-      ).map((experience, key) => (
-        <ExperienceCard key={key} experience={experience} />
-      ))
-    : undefined;
+  const ExperienceFiltered = DATA_EXPERIENCES.filter((experience) =>
+    experience.missions
+      .flatMap((mission) => mission.skills)
+      .includes(selectedSkill ?? "")
+  ).map((experience) => (
+    <ExperienceCard key={experience.id} experience={experience} />
+  ));
 
   // selection de la note correspondant au sujet
   const skillNote = DATA_SKILLS.flatMap((typeskills) => {
@@ -31,38 +32,19 @@ const SideMenu = () => {
           selectedSkill ? "sidemenu-buttonclose shown" : "sidemenu-buttonclose"
         }
       >
-        <svg
-          width="15"
-          height="15"
-          viewBox="0 0 15 15"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="0.707107"
-            y1="0.707108"
-            x2="14.8492"
-            y2="14.8492"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <line
-            x1="14.8493"
-            y1="0.707107"
-            x2="0.707121"
-            y2="14.8492"
-            stroke="white"
-            strokeWidth="2"
-          />
-        </svg>
+        <IconClose />
       </a>
 
       <div className="sidemenu-scrollcontainer">
         <h2 className="sidemenu-title">{selectedSkill}</h2>
-
-        {experienceList}
-
+        {ExperienceFiltered}
         {skillNote && <p className="sidemenu-infosupp">{skillNote}</p>}
+
+        {ExperienceFiltered.length == 0 && !skillNote && (
+          <p className="sidemenu-infosupp">
+            Aucune experience n'est reliée à cette compétence.
+          </p>
+        )}
       </div>
     </div>
   );

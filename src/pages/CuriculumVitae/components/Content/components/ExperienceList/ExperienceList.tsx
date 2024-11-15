@@ -9,10 +9,6 @@ import Skill from "../Skill";
 import React from "react";
 
 const Experience = ({ experience, isSideMenuShown }: ExperienceProps) => {
-  const listSkills = experience.skills.map((skill, key) => (
-    <Skill skill={skill} key={key} />
-  ));
-
   return (
     <div id={"exp" + experience.id} className="Experience">
       <div className="Experience-header">
@@ -58,10 +54,13 @@ const Experience = ({ experience, isSideMenuShown }: ExperienceProps) => {
           <React.Fragment key={missions.title}>
             <h5 className="Experience-title">{missions.title}</h5>
             <p className="Experience-description">{missions.description}</p>
+            <div className="Experience-skills">
+              {missions.skills?.map((skill, key) => (
+                <Skill skill={skill} key={key} />
+              ))}
+            </div>
           </React.Fragment>
         ))}
-
-        <div className="Experience-skills">{listSkills}</div>
       </div>
     </div>
   );

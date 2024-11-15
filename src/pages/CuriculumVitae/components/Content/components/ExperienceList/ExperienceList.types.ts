@@ -19,6 +19,6 @@ export type Experience = {
   missions: {
     title: string;
     description: string;
+    skills: string[];
   }[];
-  skills: string[];
 };
