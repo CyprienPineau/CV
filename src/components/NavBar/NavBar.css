@@ -1,0 +1,76 @@
+.navbar {
+  background-color: none;
+  background-color: var(--DarkTertiary);
+  box-shadow: var(--StandardShadow);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 50px;
+  z-index: 100;
+}
+.navbar-button {
+  /* width: 100px; */
+  height: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-decoration: none;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar-button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -120px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--DarkSecondary);
+  transform: rotateZ(45deg);
+  transition: 0.5s;
+  box-shadow: var(--StandardShadow);
+}
+
+.navbar-button:hover::after {
+  top: -50px;
+  transition: 0.5s;
+}
+.navbar-button:active::after {
+  background-color: var(--DarkTertiary);
+  transition: 0.1s;
+}
+
+.navbar-button div {
+  color: var(--BrightPrimary);
+  font-style: normal;
+  z-index: 1;
+}
+
+.navbar-button-cursor {
+  position: absolute;
+  bottom: -3px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  box-shadow: var(--StandardShadow);
+  transform: rotateZ(45deg);
+  z-index: 1;
+  transition: 0.2s ease-out;
+}
+.navbar-button-nocursor {
+  position: absolute;
+  bottom: -0px;
+  width: 0px;
+  height: 0px;
+  background-color: #fff;
+  transform: rotateZ(45deg);
+  transition: 0.1s ease-in;
+  z-index: 1;
+}

@@ -1,0 +1,116 @@
+/* ExperienceList */
+.ExperienceList {
+  background-color: var(--DarkPrimary);
+  padding: 90px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.ExperienceList-title {
+  font-size: 30px;
+  color: var(--MiddlePrimary);
+  margin-bottom: 60px;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+/* experience */
+.Experience {
+  background-color: var(--DarkSecondary);
+  margin-bottom: 30px;
+  max-width: 850px;
+  min-width: 250px;
+  width: 100%;
+  box-shadow: var(--StandardShadow);
+}
+.Experience-header {
+  display: flex;
+  background-color: var(--MiddlePrimary);
+  align-items: center;
+  justify-content: center;
+}
+.Experience-corps {
+  display: flex;
+  padding: 10px 30px 30px 30px;
+  flex-direction: column;
+}
+.Experience-date {
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--DarkSecondary);
+  padding: 5px;
+  word-spacing: 3px;
+}
+.Experience-duration {
+  font-size: 16px;
+  font-weight: lighter;
+  color: var(--DarkSecondary);
+}
+.Experience-work {
+  flex: 1;
+  font-size: 40px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: var(--MiddlePrimary);
+}
+.Experience-entreprise {
+  font-size: 25px;
+  font-weight: lighter;
+  color: var(--MiddlePrimary);
+  margin: 0px 10px 0px 0px;
+}
+.Experience-location {
+  font-size: 25px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: var(--MiddlePrimary);
+}
+.Experience-location:hover {
+  color: var(--BrightPrimary);
+  transition: 0.2;
+}
+.Experience-location:hover svg path {
+  fill: var(--BrightPrimary);
+  transition: 0.2;
+}
+.Experience-title {
+  font-size: 20px;
+  color: var(--BrightPrimary);
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.Experience-description {
+  white-space: pre-line;
+  line-height: 1.5;
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--BrightSecondary);
+  margin-bottom: 20px;
+}
+
+.Experience-skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .ExperienceList {
+    padding: 30px 0px 30px 0px;
+  }
+  .Experience-work {
+    font-size: 30px;
+  }
+}
+/* 700px + size menu(350)  */
+@media (max-width: 1050px) {
+  .ExperienceList.sidemenuopen {
+    padding: 30px 0px 30px 0px;
+  }
+  .Experience-work.sidemenuopen {
+    font-size: 30px;
+  }
+}

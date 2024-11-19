@@ -1,0 +1,51 @@
+.intro {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background-color: var(--DarkTertiary);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro.end {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: -100vh;
+  left: 0vh;
+  background-color: var(--DarkTertiary);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s ease-out;
+}
+
+.triangle1 {
+  animation: 3s linear 0ms rotation1;
+}
+
+.triangle2 {
+  animation: 3s linear 0ms rotation2;
+}
+
+@keyframes rotation1 {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotation2 {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}

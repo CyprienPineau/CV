@@ -1,0 +1,66 @@
+.ExperienceCard {
+  background-color: var(--cv-grey-middle);
+  border: 0px solid var(--MiddlePrimary);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: var(--StandardShadow);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.ExperienceCard:hover {
+  border-color: var(--BrightPrimary);
+  background-color: var(--cv-grey-middle-hover);
+}
+
+.ExperienceCard:active {
+  background-color: var(--DarkSecondary);
+  border-color: var(--BrightPrimary);
+}
+
+.ExperienceCard-duration {
+  color: var(--BrightPrimary);
+  font-weight: normal;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  font-size: 25px;
+  margin-top: -8px;
+}
+.ExperienceCard-work {
+  color: var(--MiddlePrimary);
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.ExperienceCard-title {
+  color: var(--cv-side-text);
+  font-weight: normal;
+  font-size: 17px;
+  margin-top: 8px;
+}
+.ExperienceCard-description {
+  color: var(--cv-side-text);
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+@media (max-width: 700px) {
+  .sidemenu {
+    width: 100vw;
+    margin-left: -100vw;
+    margin-right: 0vw;
+  }
+  .sidemenu.shown {
+    width: 100vw;
+    margin-left: 0vw;
+    margin-right: -100vw;
+  }
+  .sidemenu-scrollcontainer {
+    padding-right: 90px;
+  }
+  .sidemenu-buttonclose.shown {
+    margin-right: 20px;
+  }
+}

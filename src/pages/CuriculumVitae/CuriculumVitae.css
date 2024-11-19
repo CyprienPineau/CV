@@ -1,0 +1,38 @@
+.CuriculumVitae {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* height: 100%; */
+  flex: 1;
+  transition: 0.4;
+}
+.CuriculumVitae-maincontent {
+  height: 100%;
+  flex: 1;
+  scroll-behavior: smooth;
+}
+.CuriculumVitae-maincontent-returnTop {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  left: 15px;
+  margin-top: -65px;
+  border-radius: 50px;
+  background-color: var(--MiddleSecondary);
+  border: 3px solid var(--MiddlePrimary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.CuriculumVitae-maincontent-returnTop:hover {
+  border-color: var(--BrightPrimary);
+}
+.CuriculumVitae-maincontent-returnTop:active {
+  background-color: var(--DarkSecondary);
+}
+.CuriculumVitae-maincontent-returnTop svg line {
+  stroke: var(--MiddlePrimary);
+}
+.CuriculumVitae-maincontent-returnTop:hover svg line {
+  stroke: var(--BrightPrimary);
+}

@@ -1,0 +1,70 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  /* Theme Color */
+  --white-01: #f0f0f0;
+  --white-02: #c7c7c7;
+  --grey-light-01: #e2e2e2;
+  --grey-middle-01: #a8a8a8;
+  --grey-middle-02: #858585;
+  --grey-dark-01: #303030;
+  --grey-dark-02: #272727;
+  --grey-dark-03: #202020;
+  --black-01: #1b1b1b;
+  --black-02: #0e0e0e;
+  --blue-01: #49b8d4;
+  --blue-02: #1e3f53;
+
+  /* Home */
+  --home-grey-light: var(--grey-light-01);
+  --home-grey-dark: var(--grey-dark-01);
+  --home-grey-darker: var(--grey-dark-03);
+
+  /* ExperienceCard */
+  --cv-grey-middle: var(--black-01);
+  --cv-grey-middle-hover: var(--blue-02);
+  --cv-side-text: var(--grey-middle-01);
+
+  /* Skills */
+  --skill-background: var(--grey-dark-02);
+  --skill-background-hover: var(--blue-02);
+  --skill-supp-background: var(--black-02);
+  --skill-text: var(--grey-light-01);
+  --skill-supp-text: var(--grey-middle-02);
+
+  /* Other*/
+
+  --DarkPrimary: var(--grey-dark-02);
+  --DarkSecondary: var(--grey-dark-01);
+  --DarkTertiary: var(--grey-dark-03);
+
+  --MiddlePrimary: var(--blue-01);
+  --MiddleSecondary: var(--black-02);
+
+  --BrightPrimary: var(--white-01);
+  --BrightSecondary: var(--white-02);
+
+  --SoaThemeDark: #1f1a18;
+  --SoaThemeDarkTr: #1f1a18e3;
+  --SoaThemeHighlight: #eb4e22;
+
+  --StandardShadow: 1px 3px 5px rgba(0, 0, 0, 0.295);
+  --StandardShadowText: 0.5px 1.5px 2px rgba(0, 0, 0, 0.295);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border: 3px solid var(--DarkTertiary);
+  background-color: var(--BrightSecondary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--DarkTertiary);
+}
