@@ -3,6 +3,7 @@ import { ParagraphProps } from "./Paragraph.types";
 import "./Paragraph.css";
 import classNames from "classnames";
 import { IconPlay } from "_icons/index";
+import { motion } from "motion/react";
 
 const Paragraph = ({ id, paragraph }: ParagraphProps) => {
   return (
@@ -20,11 +21,15 @@ const Paragraph = ({ id, paragraph }: ParagraphProps) => {
         {paragraph.imgs &&
           paragraph.imgs.map((img, key) => {
             return (
-              <img
+              <motion.img
                 key={key}
                 className="paragraph-illustration-image"
                 src={img}
                 alt={"image " + paragraph.title}
+                animate={{
+                  opacity: [0, 1],
+                }}
+                transition={{ duration: 0.7 }}
               />
             );
           })}
@@ -43,10 +48,14 @@ const Paragraph = ({ id, paragraph }: ParagraphProps) => {
                     Regarder sur {video.player}
                   </div>
                 </a>
-                <img
+                <motion.img
                   className="paragraph-video-image"
                   src={video.img}
                   alt={"image " + paragraph.title}
+                  animate={{
+                    opacity: [0, 1],
+                  }}
+                  transition={{ duration: 0.7 }}
                 />
               </div>
             );
