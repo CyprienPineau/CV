@@ -1,6 +1,7 @@
 import "./Home.css";
 import { IconCV, IconPortefolio, ImgHome, SvgLinkedin } from "../../assets";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 
 const Home = () => (
   <div className="home">
@@ -13,11 +14,15 @@ const Home = () => (
     </a>
 
     <div className="home-background">
-      <img
+      <motion.img
         className="home-background-img"
         loading="lazy"
         src={ImgHome}
         alt="Image de fond"
+        animate={{
+          opacity: [0, 1],
+        }}
+        transition={{ duration: 0.7 }}
       />
     </div>
     <div className="home-textbox">

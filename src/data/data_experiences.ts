@@ -4,8 +4,8 @@ import { Experience } from "_pages/CuriculumVitae/components/Content/components/
 export const DATA_EXPERIENCES: Experience[] = [
   {
     id: "6",
-    work: "DÉVELOPPEUR FRONT CREATIF",
-    entreprise: "OPEN STUDIO",
+    work: "Développeur Front Créatif",
+    entreprise: "Open Studio",
     imgRef: undefined,
     location: "Lyon",
     locationRef:
@@ -47,8 +47,8 @@ export const DATA_EXPERIENCES: Experience[] = [
   },
   {
     id: "5",
-    work: "DÉVELOPPEUR FRONT",
-    entreprise: "ALTEN",
+    work: "Développeur Front",
+    entreprise: "Alten",
     imgRef: undefined,
     location: "Lyon",
     locationRef:
@@ -74,7 +74,7 @@ export const DATA_EXPERIENCES: Experience[] = [
   },
   {
     id: "4",
-    work: "LEAD UX/UI",
+    work: "Associé / Product Designer",
     entreprise: "OpenEra",
     imgRef: ImgOpenEra,
     location: "Lyon",
@@ -101,7 +101,7 @@ export const DATA_EXPERIENCES: Experience[] = [
   },
   {
     id: "3",
-    work: "DÉVELOPPEUR R&D",
+    work: "Développeur R&D",
     entreprise: "Ausy",
     imgRef: ImgAusy,
     location: "Sèvres",
@@ -120,7 +120,7 @@ export const DATA_EXPERIENCES: Experience[] = [
   },
   {
     id: "2",
-    work: "DÉVELOPPEUR INTEGRATEUR",
+    work: "Développeur Intégrateur",
     entreprise: "Safran",
     imgRef: ImgSafran,
     location: "Massy",
@@ -139,7 +139,7 @@ export const DATA_EXPERIENCES: Experience[] = [
   },
   {
     id: "1",
-    work: "DÉVELOPPEUR",
+    work: "Développeur",
     entreprise: "Safran",
     imgRef: ImgSafran,
     location: "Massy",
@@ -158,7 +158,7 @@ export const DATA_EXPERIENCES: Experience[] = [
   },
   {
     id: "0",
-    work: "INGENIEUR QUALITE",
+    work: "Ingénieur Qualité",
     entreprise: "IMI Precision Engineering",
     imgRef: ImgIMIPrecision,
     location: "Poole, Angleterre",

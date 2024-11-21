@@ -2,6 +2,7 @@ import "./Project.css";
 import ProjectContent from "../ProjectContent";
 import { ProjectProps } from "./Project.types";
 import { useSearchParams } from "react-router-dom";
+import { motion } from "motion/react";
 
 const Project = ({ project }: ProjectProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -9,19 +10,23 @@ const Project = ({ project }: ProjectProps) => {
 
   return (
     <div className="portefoliosection">
-      <div
+      <motion.div
         className="portefoliosection-background"
         style={{
           backgroundImage: `url(${project.background})`,
           height: isDetailDiplay ? "40%" : "100%",
           transition: isDetailDiplay ? "ease-in-out 0.5s" : "ease-in-out 0.2s",
         }}
+        animate={{
+          opacity: [0, 1],
+        }}
+        transition={{ duration: 0.7 }}
       >
         <div
           className="portefoliosection-background-filter"
           style={{ backgroundColor: project.backgroundColor }}
         >
-          <img
+          <motion.img
             className={
               isDetailDiplay
                 ? "portefoliosection-logominimized"
@@ -29,6 +34,10 @@ const Project = ({ project }: ProjectProps) => {
             }
             src={project.logo}
             alt={"Logo de" + project.name}
+            animate={{
+              opacity: [0, 1],
+            }}
+            transition={{ duration: 0.7 }}
           />
           <h1 className="portefoliosection-title">{project.name}</h1>
           <div className="portefoliosection-subtitle">
@@ -48,7 +57,7 @@ const Project = ({ project }: ProjectProps) => {
             </button>
           )}
         </div>
-      </div>
+      </motion.div>
       {isDetailDiplay && <ProjectContent project={project} />}
     </div>
   );
