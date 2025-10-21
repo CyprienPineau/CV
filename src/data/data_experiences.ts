@@ -4,14 +4,14 @@ import { Experience } from "_pages/CuriculumVitae/components/Content/components/
 export const DATA_EXPERIENCES: Experience[] = [
   {
     id: "6",
-    work: "Développeur Front Créatif",
+    work: "Développeur front - Scrum Master - Designer UI/UX",
     entreprise: "Open Studio",
     imgRef: undefined,
     location: "Lyon",
     locationRef:
       "https://www.google.com/maps/place/OpenStudio+Lyon/@45.7589456,4.828387,17z/data=!3m2!4b1!5s0x47f4ea537bbc0faf:0xe695c12cb2f62278!4m6!3m5!1s0x47f4ebef884b839b:0xdf1d15b93eedbd66!8m2!3d45.7589419!4d4.8309619!16s%2Fg%2F11nxrqsgj8?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D",
-    date: "Mars 2021 à Mars 2022",
-    duration: "2 ans",
+    date: "Mars 2022 à Juillet 2024",
+    duration: "2 ans et 4 mois",
     missions: [
       {
         title: "Design d'un outil de travail pour les chercheurs.",
