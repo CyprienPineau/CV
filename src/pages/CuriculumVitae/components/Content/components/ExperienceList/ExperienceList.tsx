@@ -17,8 +17,8 @@ const Experience = ({ experience, isSideMenuShown }: ExperienceProps) => {
         </p>
       </div>
       <div className="Experience-corps">
-        <h4>
-          <span
+        <div>
+          <h4
             className={
               isSideMenuShown
                 ? "Experience-work sidemenuopen"
@@ -26,8 +26,7 @@ const Experience = ({ experience, isSideMenuShown }: ExperienceProps) => {
             }
           >
             {experience.work}
-          </span>
-          <br />
+          </h4>
           <span className="Experience-entreprise">{experience.entreprise}</span>
           <a
             href={experience.locationRef}
@@ -48,7 +47,7 @@ const Experience = ({ experience, isSideMenuShown }: ExperienceProps) => {
             </svg>
             {" " + experience.location}
           </a>
-        </h4>
+        </div>
 
         {experience.missions.map((missions) => (
           <React.Fragment key={missions.title}>
