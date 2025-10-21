@@ -4,7 +4,7 @@ import { Experience } from "_pages/CuriculumVitae/components/Content/components/
 export const DATA_EXPERIENCES: Experience[] = [
   {
     id: "6",
-    work: "Développeur front - Scrum Master - Designer UI/UX",
+    work: "Développeur Front - Scrum Master - Designer UI/UX",
     entreprise: "Open Studio",
     imgRef: undefined,
     location: "Lyon",
@@ -14,9 +14,9 @@ export const DATA_EXPERIENCES: Experience[] = [
     duration: "2 ans et 4 mois",
     missions: [
       {
-        title: "Design d'un outil de travail pour les chercheurs.",
+        title: "Design d’une plateforme web de Recherche de DATA Science",
         description:
-          "Cette plateforme est à destination des chercheurs IA d'OpenStudio. Elle a pour but d'observer, comprendre et simuler les écosystèmes industriels.\nJ'ai été choisi pour apporter de la structure et des idées à ce projet en lancement notamment sur le design des interfaces.",
+          "- Stack : React, ReduxToolkit, Vite, Storybook, cypress, Docker\n- Etude du besoin, atelier de cocréation, réalisation de Mockup\n- Construction de l’architecture logicielle Front et développement\n- Accompagnement d’un stagiaire.",
         skills: [
           "Figma",
           "ReactJS",
@@ -30,7 +30,7 @@ export const DATA_EXPERIENCES: Experience[] = [
       {
         title: "Animation d'équipe & développement dans le projet NextGen",
         description:
-          "J'ai été chargé de prendre des tâches de Scrum Master : organisation des réunions, suivis,  animation des rituels et amélioration continue.\n\nJe suis intervenu dans le développement de sites de primes à l'énergie comme primes-energie.primagaz.fr, prime-energie-reno.fr, prime-eco-travaux.carrefour.fr, et également plusieurs solutions de back office.",
+          "- Stack : React, Next JS, TypeScript, Jest, Strapi, Storybook, Tailwind, Docker\n- En méthode agile, organisation des sprints, suivis de taches, rétrospective et amélioration continue d’une équipe de 7 personnes\n- Collaboration avec le Product Owner pour assurer la clarté et la faisabilité des user stories",
         skills: [
           "ReactJS",
           "NextJS",
@@ -57,9 +57,9 @@ export const DATA_EXPERIENCES: Experience[] = [
     duration: "1 ans",
     missions: [
       {
-        title: "Mission chez CISCO",
+        title: "Mission chez CISCO - Application web de cybersécurité",
         description:
-          "Ma mission est de concevoir les nouvelles interfaces de l'outil de cybersécurité Cybervision de CISCO dans une équipe de six personnes.\n\nJe me distingue pour mes propositions de mockup pour l'aspect UX de la plateforme, en mutualisant les idées et besoins utilisateurs pour construire plusieurs propositions et également en accompagnant mes collègues sur l'outil FIGMA.\nDéveloppement en React JS avec le concept des Hooks et implémentation du style en SCSS. \n\nJ'en écris un mode d'emploi pour normer les tests d'interfaces pour faire face à un manque de bonnes pratiques. Il sera utilisé par plusieurs équipes.\n\nLa mission s'arrête prématurément, une pénurie de matières premières incite Cisco à se séparer de ses consultants.",
+          "- Stack : React, Next JS, TypeScript, Cypress, Ant Design, Redux\n- Création de Mockup, et développement logiciel\n- J’intègre l’utilisation de Figma dans l’équipe",
         skills: [
           "ReactJS",
           "SCSS",
@@ -84,9 +84,9 @@ export const DATA_EXPERIENCES: Experience[] = [
     duration: "2 ans",
     missions: [
       {
-        title: "Création d’une Start-Up d'applications numériques",
+        title: "Lancement d’une Start-Up d'applications numériques",
         description:
-          "Lancement avec 3 autres associés ingénieurs\n\nÉtude de l’utilisateur type et des solutions actuelles du marché.\nDéfinition du parcours utilisateur, réalisation de Wireframes, et prototype cliquable avec Adobe XD en accord avec les contraintes techniques.\n\nDéveloppement d’un démonstrateur de l’application, réalisation de la partie Front-End en React Native.\nCréation d’assets graphiques avec Illustrator, et Photoshop, et création d’une licence de jeu de rôle de démonstration pour des tests utilisateurs.\nOrganisation de sessions de tests utilisateurs.\n\nRédaction d’un business plan, écriture de spécifications fonctionnelles, organisation en jalons et chiffrage des activités.",
+          "- Étude de marché, entretien utilisateurs.\n- Création des chemins utilisateurs et Mockup.\n- Développement d’une alpha et tests utilisateurs.\n- Écriture de spécifications, chiffrage et organisation de jalons",
         skills: [
           "ReactNative",
           "Git",
@@ -113,7 +113,7 @@ export const DATA_EXPERIENCES: Experience[] = [
       {
         title: "Outil de réunion en réalité augmentée",
         description:
-          "Initiation de la refonte du projet et création de la nouvelle architecture.\nCoordination de deux jeunes ingénieur.\nUtilisation de la technologie Hololens couplée avec Unity/C#.\nRéflexion de développement UX.",
+          "- Initiation de la refonte du projet et création de la nouvelle architecture.\n- Coordination de deux jeunes ingénieur.\n- Utilisation de la technologie Hololens couplée avec Unity/C#.\n- Réflexion de développement UX.",
         skills: ["Unity/C#", "Equipe de 2 ingénieurs"],
       },
     ],
@@ -132,7 +132,7 @@ export const DATA_EXPERIENCES: Experience[] = [
       {
         title: "Logiciel de suivi de cible",
         description:
-          "Développement en C/C++ sous linux.\nRéglage de l’algorithme suite aux tests. \nRéponse à des problématiques de traitement d’images.\nTravail en autonomie et tests en condition réelle.",
+          "- Développement en C/C++ sous linux.\n- Réglage de l’algorithme suite aux tests. \n- Réponse à des problématiques de traitement d’images.\n- Travail en autonomie et tests en condition réelle.",
         skills: ["C/C++", "OS Linux", "Autonomie"],
       },
     ],
@@ -151,7 +151,7 @@ export const DATA_EXPERIENCES: Experience[] = [
       {
         title: "Logiciel de pilotage d’un module de vision de drone ",
         description:
-          "En équipe de 14 personnes, développement C/C++ sous linux, rédaction et application de cas de test, de procédure de tests.\nTâches de traçabilité d’exigences.",
+          "- En équipe de 14 personnes, développement C/C++ sous linux,\n- Rédaction cas de test et de procédure de tests.\n- Tâches de traçabilité d’exigences.",
         skills: ["C/C++", "Git", "OS Linux", "Cycle en V"],
       },
     ],
@@ -170,7 +170,7 @@ export const DATA_EXPERIENCES: Experience[] = [
       {
         title: "Qualification du processus de production de la valves IC03",
         description:
-          "Stage de 4 mois puis embauche.\nAnalyse de données de mesure de pièces.\n Qualification de la répétabilité et reproductibilité des pièces critiques.\nProposition et conception d'un outil de mesure pour une pièce complexe.\nPréparation de rapports, et exposition des résultats devant un client (Snecma)",
+          "- Stage de 4 mois puis embauche.\n- Analyse de données de mesure de pièces.\n- Qualification de la répétabilité et reproductibilité des pièces critiques.\n- Proposition et conception d'un outil de mesure pour une pièce complexe.\n- Préparation de rapports, et exposition des résultats devant un client (Snecma)",
         skills: ["Anglais", "Documentation", "Autonomie"],
       },
     ],
